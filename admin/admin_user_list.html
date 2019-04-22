@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<!--页面标题-->
+	<title>怀海商城-后台管理</title>
+	<title>用户列表</title>
+<!--图标-->
+<link rel=" icon" href="../favicon.ico" >
+</head>
+<body onload="getUserList()">
+<!--页面内容表格循环-->
+	<div>
+		<table>
+			<!--表格头行开始-->
+			<thead>
+			<tr>
+				<th><label for="box"><input type="checkbox" id="box">全选</label></th>
+				<th>编号</th>
+				<th>头像</th>
+				<th>登录名</th>
+				<th>用户名</th>
+				<th>性别</th>
+				<th>邮箱</th>
+				<th>电话</th>
+				<th>密码</th>
+				<th>生日</th>
+				<th>操作</th>
+			</tr>
+			</label>
+			<!--表格头行结束-->
+			<!--表格主题开始-->
+			<tbody id="user_list_tbody">
+			
+			</tbody>
+			<!--表格主题结束-->
+		</table>
+	</div>
+	<script>
+//获取列表函数，异步请求 
+	function getUserList(){
+		//1创建异步对象
+		var xhr= new XMLHttpRequest();
+		//console.log(xhr);
+		//4创建监听，接收数据
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4&&xhr.status==200){
+				var result=xhr.responseText;
+				//console.log(result);
+				var arr=JSON.parse(result);
+				//创建变量接收到页面的内容
+				var html="";
+				for(var i=0;i<arr.length;i++){
+					//判断性别
+					var gender="";
+					if(arr[i].gender==1){
+						gender="男";
+					}else if(arr[i].gender==0){
+						gender="女";
+					};
+					//把日期转换成本地时间
+					var birthday= new Date(arr[i].birthday);
+					var userbirthday=birthday.toLocaleString();
+					//console.log(userbirthday);
+					html+=`
+									<tr>
+										<td><input type="checkbox"></td>
+										<td>${arr[i].uid}</td>
+										<td>${arr[i].avatar}</td>
+										<td>${arr[i].uname}</td>
+										<td>${arr[i].user_name}</td>
+										<td>${gender}</td>
+										<td>${arr[i].email}</td>
+										<td>${arr[i].phone}</td>
+										<td>${arr[i].upwd}</td>
+										<td>${userbirthday}</td>
+										<td>
+										<a href="admin_user_detail.html?uid=${arr[i].uid}" style="text-decoration:none">详情</a>
+										<a href="admin_user_update.html?uid=${arr[i].uid}" style="text-decoration:none">修改 </a>
+										<a href="javascript:delUser(${arr[i].uid})" style="text-decoration:none">删除</a>
+										</td>
+									</tr>
+					`;
+				};
+				user_list_tbody.innerHTML=html;
+			};
+		};
+		//2打开连接，get请求
+		xhr.open("get","/user/get_user_list",true);
+		//3发送请求
+		xhr.send(null);
+	};
+//删除用户信息，异步请求
+	function delUser(uid){
+		//1创建异步对象
+		var xhr= new XMLHttpRequest();
+		//4创建监听，接收请求
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4&&xhr.status==200){
+				var result=xhr.responseText;
+				var arr=JSON.parse(result);
+				//console.log(arr);
+				if(arr[0].code==200){
+					alert(arr[0].msg);
+					getUserList();
+				}else if(arr[0].code==400){
+					alert(arr[0].msg);
+				};
+			};
+		};
+		//2打开连接，post的请求
+		xhr.open("post","/user/del_user",true);
+		//3设置请求的头信息，发送请求
+		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		var formdata="uid="+uid;
+		xhr.send(formdata);
+	};
+	</script>
+</body>
+</html>

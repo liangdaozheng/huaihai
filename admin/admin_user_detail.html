@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<!--页面标题-->
+	<title>怀海商城-后台管理</title>
+	<title>用户的详情或检索</title>
+<!--图标-->
+	<link rel=" icon" href="../favicon.ico" >
+</head>
+<body onload="getUserDetail()">
+<!--内容放入input中-->
+<!--内容头部 密码另外-->
+<div>
+	<!--隐藏编号-->
+	<div><input type="hidden" id="uid"></div>
+	<div>登录名 <input type="text" id="uname"></div>
+	<div>用户名 <input type="text" id="user_name"></div>
+	<div>生&nbsp;&nbsp;&nbsp;日 <input type="text" id="birthday"></div>
+	<div>邮&nbsp;&nbsp;&nbsp;箱 <input type="text" id="email"></div>
+	<div>电&nbsp;&nbsp;&nbsp;话 <input type="text" id="phone"></div>
+	<div>性&nbsp;&nbsp;&nbsp;别 
+		<input type="radio" id="gendermen" name="sex"><label for="gendermen">男</label>
+		<input type="radio" id="genderwomen" name="sex"><label for="genderwomen">女</label>
+	</div>
+</div>
+<!--修改按钮，跳转修改页面-->
+<div>
+	<button ><a href="javascript:getUserUpdate()" style="text-decoration:none">修改</a></button>
+</div>
+<script>
+	function getUserDetail(){
+		//接收前面页面请求带过来的数据
+		var urlParams= new URLSearchParams(location.search);
+		var $uid=urlParams.get("uid");
+		console.log($uid);
+		uid.value=$uid;
+		//1创建异步请求对象
+		var xhr= new XMLHttpRequest();
+		//4创建监听，接收数据
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4&&xhr.status==200){
+					//接收数据，分析响应的数据情况
+				var result=xhr.responseText;
+				var arr=JSON.parse(result);
+				//console.log(arr);
+					//对生日的数据进行转换
+				var $birthday= new Date(arr[0].birthday);
+				//var month=$birthday.getMonth();
+				//console.log(month);
+				var birthday=$birthday.toLocaleDateString();
+				//console.log(birthday);
+				var birthday_obj=birthday.split("/");
+				//console.log(birthday_obj);
+					//拼接生日字符串
+				var user_birth=birthday_obj[0]+"-"+birthday_obj[1]+"-"+birthday_obj[2];
+				console.log(user_birth);
+				//数据显示在网页中
+				uname.value=arr[0].uname;
+				user_name.value=arr[0].user_name;
+				birthday.value=user_birth;
+				email.value=arr[0].email;
+				phone.value=arr[0].phone;
+					//对性别进行数据的分析
+				if(arr[0].gender==1){
+					gendermen.checked=true;
+				}else if(arr[0].gender==0){
+					genderwomen.checked=true;
+				};
+			};
+		};
+		//2打开连接，get的请求
+		var url="/user/detail_user?uid="+uid.value;
+		xhr.open("get",url,true);
+		//3发送请求
+		xhr.send(null);
+	}
+	//跳转修改页面
+	function getUserUpdate(){
+		location.href="http://127.0.0.1:8080/admin_user_update.html?uid="+uid.value;
+	};
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

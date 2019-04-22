@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<!--页面名称-->
+	<title>怀海商城-后台管理</title>
+	<title>登录页面</title>
+<!--图标-->
+	<link rel=" icon" href="../favicon.ico" > 
+<!--样式修改-->
+<style>
+	*{margin:0;padding:0}
+	#admin_header{
+		width:300px;
+		height:240px;
+		margin:auto;
+/*		border:1px solid green;*/
+	}
+	div.header_img{
+		width:280px;
+		height:230px;
+		background:#fff url(admin_login_image/huaihai.png) no-repeat 0px -61px;
+	}
+	#admin_section{
+		height:550px;
+		background-color:#f7f7f7;
+	}
+	div.section_login{
+		width:350px;
+		height:400px;
+		margin:0 auto;
+		text-align:center;
+	}
+	div.login_h1{
+		width:100%;
+		margin-top:10px;
+		margin-bottom:30px;
+		color:#dfad78d9;
+	}
+	.admin_uname,.admin_upwd{
+		width:100%;
+		height:36px;
+		border-radius:5px;
+		box-sizing:border-box;
+		padding-left:15px;
+		outline:0;
+		border:0;
+		background:#fff url(admin_login_image/yhm.png) no-repeat 310px 5px;
+		margin-bottom:30px;
+		font-size:16px;
+		background-color:rgba(0,0,0,0.2);
+	}
+	.admin_upwd{background-image:url(admin_login_image/mm.png)}
+	button.mylogin{
+		width:150px;
+		height:35px;
+		border-radius:5px;
+		outline:0;
+		border:0;
+		background-image:linear-gradient(to bottom,#fff 0%,#dfad78d9 100%);
+		font-size:20px;
+		color:#6f5959b3;
+	}
+	button.mylogin:active{outline:0;}
+	#footer_hh{
+		width:350px;
+		margin:0 auto;
+		text-align:center;
+		color:#2a343fb8;
+	}
+	#footer_hh h1{
+		margin-bottom:20px;
+	}
+</style>
+</head>
+<body>
+<!--页面头部-->
+<header>
+	<div id="admin_header">
+		<a href="#">
+			<div class="header_img"></div>
+		</a>
+	</div>
+</header>
+<!--页面内容-->
+<section id="admin_section">
+	<div class="section_login">
+		<table></table>
+		<div class="login_h1"><h1>管理员登录</h1></div>
+		<div><input type="text" placeholder="管理员登录名" id="uname" class="admin_uname"></div>
+		<div><input type="password" placeholder="管理员登录密码" id="upwd" class="admin_upwd"></div>
+		<div><button onclick="adminLogin()" class="mylogin">登录</button></div>
+	</div>
+	<!--页面底部-->
+	<footer>
+		<div id="footer_hh">
+			<h1>怀海商城后台管理系统</h1>
+			<p>©2019 版权所有，仅供学习</p>
+		</div>
+	</footer>
+</section>
+
+<script>
+	function adminLogin(){
+		//1创建异步请求对象
+		var xhr= new XMLHttpRequest();
+		//4创建监听，接收数据
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4&&xhr.status==200){
+				var result=xhr.responseText;
+				var arr=JSON.parse(result);
+				//console.log(arr);
+				//接收数据，分析响应的数据结果；判断
+				if(arr[0].code==200){
+					location.href='http://127.0.0.1:8080/myadmin.html';
+				}else if(arr[0].code==400){
+					alert(arr[0].msg);
+					location.href='#';
+				};
+			};
+		};
+		//2打开连接，post请求
+		xhr.open("post","/user/admin_login",true);
+		//3设置请求消息头，发送请求
+		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			//创建请求主体
+		var formdata="uname="+uname.value+"&upwd="+upwd.value;
+		xhr.send(formdata);
+	};
+</script>
+</body>
+</html>

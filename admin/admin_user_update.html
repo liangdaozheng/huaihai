@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<!--页面名称-->
+	<title>怀海商城-后台管理</title>
+	<title>用户修改</title>
+<!--图标-->
+	<link rel=" icon" href="../favicon.ico" > 
+</head>
+<body onload="getUserUpdate()">
+<!--页面获取后加载，数据显示站位符样式-->
+<!--内容放入input中-->
+<!--内容头部 密码生日另外-->
+<div>
+	<!--隐藏编号-->
+	<div><input type="hidden" id="uid"></div>
+	<div>
+		<label for="uname">登录名</label> 
+		<input type="text" id="uname">
+	</div>
+	<div>
+		<label for="user_name">用户名</label>
+		<input type="text" id="user_name">
+	</div>
+<!-- 	<div>生&nbsp;&nbsp;&nbsp;日 <input type="text" id="birthday"></div> -->
+	<div>
+		<label for="email">邮&nbsp;&nbsp;&nbsp;箱 </label>
+		<input type="text" id="email">
+	</div>
+	<div>
+		<label for="phone">电&nbsp;&nbsp;&nbsp;话</label> 
+		<input type="text" id="phone">
+	</div>
+	<div>
+		性&nbsp;&nbsp;&nbsp;别 
+		<input type="radio" id="gendermen" name="sex" value="1"><label for="gendermen">男</label>
+		<input type="radio" id="genderwomen" name="sex" value="0"><label for="genderwomen">女</label>
+	</div>
+</div>
+<!--提交按钮，跳转用户检索页面-->
+<div>
+	<button onclick="postUserUpdate()">提交</button>
+</div>
+<script>
+	function getUserUpdate(){
+		//获取前面跳转页面的数据
+		var urlParams= new URLSearchParams(location.search);
+		var $uid=urlParams.get("uid");
+		console.log($uid);
+		uid.value=$uid;
+		//1创建异步请求对象
+		var xhr= new XMLHttpRequest();
+		//4创建监听，接收数据
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4&&xhr.status==200){
+				//接收数据，转换字符串，分析响应的结果
+				var result=xhr.responseText;
+				var arr=JSON.parse(result);
+				//console.log(arr);
+				//显示到页面的内容
+				uname.placeholder=arr[0].uname;
+				user_name.placeholder=arr[0].user_name;
+				email.placeholder=arr[0].email;
+				phone.placeholder=arr[0].phone;
+					//对性别的判断
+				if(arr[0].gender==1){
+					gendermen.checked=true;
+				}else if(arr[0].gender==0){
+					genderwomen.checked=true;
+				};
+			};
+		};
+		//2打开连接，get的请求
+		var url="/user/detail_user?uid="+uid.value;
+		xhr.open("get",url,true);
+		//3发送请求
+		xhr.send(null);
+	};
+	function postUserUpdate(){
+		//1创建异步请求对象
+		var xhr= new XMLHttpRequest();
+		//4创建监听，接收响应数据，跳转页面
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4&&xhr.status==200){
+				//接收数据，分析响应的数据
+				var result=xhr.responseText;
+				var arr=JSON.parse(result);
+				//console.log(arr);
+				//修改成功跳转页面
+				if(arr[0].code==200){
+					alert(arr[0].msg);
+					location.href='http://127.0.0.1:8080/admin_user_detail.html?uid='+uid.value;
+				}else if(arr[0].code==400){
+					alert(arr[0].msg);
+				};
+			};
+		};
+		//2打开连接，post提交
+		xhr.open("post","/user/update_user",true);
+		//3修改请求消息头，发送请求
+		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			//判断性别选项
+		var gender="";
+		if(gendermen.checked){
+			gender=gendermen.value;
+		}else if(genderwomen.checked){
+			gender=genderwomen.value;
+		};
+			//创建主体
+		var formdata="uname="+uname.value+"&user_name="+user_name.value+"&email="+email.value+"&phone="+phone.value+"&gender="+gender+"&uid="+uid.value;
+		xhr.send(formdata);
+	};
+</script>
+</body>
+</html>
