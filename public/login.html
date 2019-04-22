@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<!--页面名称-->
+	<title>怀海商城</title>
+	<title>登录</title>
+<!--图标-->
+ 	<link rel=" icon" href="../favicon.ico" >
+<!--引入css文件-->
+<link rel="stylesheet" href="../login.css">
+</head>
+<body>
+<!--登录页头部-->
+<!--header start-->
+	<header class="login_header">
+		<a href="#">
+				<img src="login_reg_image/huaihai.png" alt="加载中...">	
+			</a>		
+	</header>
+<!--header end-->
+<!--登录页主体-->
+<!--section start-->
+	<section class="login_sect">
+		<aside class="login_right">
+			<div class="login_right_one">
+				<a href="http://127.0.0.1:8080/reg.html">用户注册</a>	
+				<p>用户登录</p>
+			</div>
+			<!--用户名行开始-->
+			<div class="login_right_other">
+				<label for="uname">用户名称</label>
+				<input type="text" id="uname" placeholder="请输入账号名" onfocus="getUname()" onblur="loseUname()" title="请登录">
+			</div>
+			<p id="puname"></p>
+			<!--用户名结束-->
+			<!--密码行开始-->
+			<div class="login_right_other">
+				<label for="upwd">用户密码</label>
+				<input type="password" id="upwd" placeholder="请输入密码" onfocus="getUpwd()" onblur="loseUpwd()" title="注意保密">				
+			</div>
+			<p id="pupwd"></p>	
+			<!--密码结束-->
+			<div class="login_auto_line">
+				<label for="auto"><input type="checkbox" id="auto">自动登录</label>	
+				<a href="#">忘记密码？</a>
+			</div>
+			<!--按钮开始-->		
+			<button onclick="getLogin()" id="user_login">登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录</button>			
+			<!--按钮结束-->
+		</aside>
+	<!--登录页面底部信息-->
+	<!--footer start-->
+		<footer id="login_foot">
+			<p>©&nbsp;&nbsp;版权所有&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;仅供学习</p>
+		</footer>
+	<!--footer end-->
+	</section>
+<!--section end-->
+<!--引入js文件-->
+	<script type="text/javascript" src="../login.js"></script>
+</body>
+</html>

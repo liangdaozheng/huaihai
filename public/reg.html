@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta >
+<!--页面名称  -->
+	<title>怀海商城</title>
+	<title>注册</title>
+<!--图标 	 -->
+ 	<link rel=" icon" href="../favicon.ico" > 
+<!--引入外部样式-->
+<link rel="stylesheet" href="../reg.css">
+</head>
+<body>
+<!--注册页头部-->
+<!--header start-->
+	<header class="reg_header">		
+			<a href="#">
+				<img src="login_reg_image/huaihai.png" alt="加载中...">	
+			</a>		
+	</header>
+<!--header end-->
+<!--注册页主题-->
+<!--section start-->
+	<section class="reg_section">
+			<table></table>
+			<!--注册页右侧注册栏-->
+			<!--aside start-->
+					<aside class="reg_aside">
+						<div>
+								<div class="reg_aside_one">
+									<p>用户注册</p>
+									<a href="http://127.0.0.1:8080/login.html">用户登录</a>
+								</div>
+								<div class="reg_aside_other">
+									<label for="uname" class="uname_lab">登录名称</label>
+									<input type="text" id="uname" placeholder="请输入您的用户名" onfocus="getRegName()" onblur="loseRegName()">
+								</div>
+								<p id="uname_p"></p>
+								<div class="reg_aside_other">
+									<label for="upwd" class="upwd_lab">	登录密码</label>
+									<input type="password" id="upwd" placeholder="请输入您的密码" onfocus="getRegUpwd()" onblur="loseRegUpwd()">
+								</div>
+								<p id="upwd_p"></p>
+								<div class="reg_aside_other">
+									<label for="ok_upwd" class="ok_upwd_lab">确认密码</label>
+									<input type="password" id="ok_upwd" placeholder="请确认您的密码" onfocus="getRegOk()" onblur="loseRegOk()">
+								</div>
+								<p id="ok_upwd_p"></p>
+								<div class="reg_aside_other">
+									<label for="email" class="email_lab">电子邮箱</label>
+									<input type="text" id="email" placeholder="请输入您的邮箱" onfocus="getRegEmail()" onblur="loseRegEmail()">
+								</div>
+								<p id="email_p"></p>
+								<div class="reg_aside_other">
+									<label for="phone" class="phone_lab">手机号码</label>
+									<input type="text" id="phone" placeholder="请输入手机号码" onfocus="getRegPhone()" onblur="loseRegPhone()">
+								</div>
+								<p id="phone_p"></p>
+								<button id="user_reg" onclick="register()">立即注册</button>
+						</div>
+					</aside>
+			<!--aside end-->
+	
+	</section>
+<!--section end-->
+<!--注册页底部-->
+<!--footer start-->
+	<footer >
+		<p>©&nbsp;&nbsp;版权所有&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;仅供学习</p>
+	</footer>
+<!--footer end-->
+<!--引入javascript-->
+<script type="text/javascript" src="../reg.js"></script>
+</body>
+</html>
