@@ -11,9 +11,9 @@ server.listen(8080);
 //托管静态资源
 server.use(express.static('public'));
 server.use(express.static('admin'));
-server.use(express.static('huaihai_images'));
-server.use(express.static('css'));
-server.use(express.static('javascript'));
+//server.use(express.static('huaihai_images'));
+//server.use(express.static('css'));
+//server.use(express.static('javascript'));
 //使用bodyParser解决post的请求
 server.use(bodyParser.urlencoded({extended:false}));
 //挂载用户路由
