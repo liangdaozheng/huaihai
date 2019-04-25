@@ -1,0 +1,25 @@
+/* 公共样式 */
+/* 先去掉所有元素的内外边距 */
+*{
+  margin:0;
+  padding:0;
+}
+/* 定义共同字体大小 */
+.hh_comm_font{
+  font-size:0.75rem;
+}
+.hh_comm_bg{
+  background-color:#f6f6f6;
+}
+/* 去掉a标签的下划线 */
+.hh_text_dec{
+  text-decoration: none;
+}
+/* 字体的颜色 */
+.hh_font_color{
+  color:#999999;
+}
+/* 怀海红 */
+.hh_reg_color{
+  color:#cc2e36;
+}

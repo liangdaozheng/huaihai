@@ -1,0 +1,35 @@
+/* header 中的header的样式 */
+.header_head{
+  width:100%;
+  height:2.5rem;
+}
+.header_header_nav{
+  height:100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:800px;
+  margin-left:380px;
+}
+/* 添加|线 */
+.header_header_nav li+li::before{
+  content:"|";
+  margin:8px;
+  color:#999999;
+  font-weight: lighter;
+}
+/* 字体的颜色，去下滑线 */
+.header_header_nav>li>a{
+  text-decoration: none;
+  color:#999999;
+}
+.header_header_nav>li:nth-child(2)>a{
+  color:#cc2e36;
+}
+.header_header_nav li:last-child>ul{
+  display: none;
+}
+.header_header_nav li:last-child:hover{
+  display: inline;
+}
