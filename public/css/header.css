@@ -3,21 +3,22 @@
   width:100%;
   height:2.5rem;
 }
+/* 弹性布局 */
 .header_header_nav{
   height:100%;
   list-style: none;
-  display: flex;
-  justify-content: space-between;
+  display:flex;
+  justify-content: space-around;
   align-items: center;
   width:800px;
   margin-left:380px;
 }
-/* 添加|线 */
-.header_header_nav li+li::before{
-  content:"|";
-  margin:8px;
-  color:#999999;
-  font-weight: lighter;
+.header_header_nav>li{
+  margin-left:6px;
+}
+/* 添加|线的距离 */
+.header_header_nav>li>a{
+  margin-right:6px;
 }
 /* 字体的颜色，去下滑线 */
 .header_header_nav>li>a{
@@ -27,9 +28,45 @@
 .header_header_nav>li:nth-child(2)>a{
   color:#cc2e36;
 }
-.header_header_nav li:last-child>ul{
-  display: none;
+/* 导航最后的li里的 */
+.header_header_nav>li:last-child>div>a{
+  text-decoration: none;
+  color:#999999;
 }
-.header_header_nav li:last-child:hover{
+/* 控制显浮的框 */
+.header_header_nav>li:last-child>div{
+  position:relative;
+}
+.header_header_nav>li:last-child>div>ul{
+  width:75px;
+  height:124px;
+  border:1px solid rgba(246,246,246,0);
+  border-top:none;
+  position:absolute;
+  top:3px;
+  left:-9px;
+}
+.header_header_nav>li:last-child>div>ul>li{
+  border:1px solid #999999;
+  padding-left:5px;
+  line-height: 24px;
+}
+.header_header_nav>li:last-child>div>ul>li{
+  border-top:none;
+}
+.header_header_nav>li:last-child>div>ul>li:first-child{
+  border:none;
+  content:"";
   display: inline;
+}
+.header_header_nav>li:last-child>div>ul{
+  display: none;;
+  list-style: none;
+}
+.header_header_nav>li:last-child>div:hover ul{
+  display: block;
+}
+.header_header_nav>li:last-child>div>ul>li>a{
+  color:#999999;
+  text-decoration: none;
 }
