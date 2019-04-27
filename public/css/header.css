@@ -10,15 +10,12 @@
   display:flex;
   justify-content: space-around;
   align-items: center;
-  width:800px;
-  margin-left:380px;
-}
-.header_header_nav>li{
-  margin-left:6px;
+  width:1190px;
+  margin-left:220px;
 }
 /* 添加|线的距离 */
 .header_header_nav>li>a{
-  margin-right:6px;
+  margin-right:25px;
 }
 /* 字体的颜色，去下滑线 */
 .header_header_nav>li>a{
@@ -28,10 +25,16 @@
 .header_header_nav>li:nth-child(2)>a{
   color:#cc2e36;
 }
+.header_header_nav>li>a:hover{
+  color:#cc2e36;
+}
 /* 导航最后的li里的 */
 .header_header_nav>li:last-child>div>a{
   text-decoration: none;
   color:#999999;
+}
+.header_header_nav>li:last-child>div:hover>a{
+  color:#dfad78d9;
 }
 /* 控制显浮的框 */
 .header_header_nav>li:last-child>div{
@@ -69,4 +72,113 @@
 .header_header_nav>li:last-child>div>ul>li>a{
   color:#999999;
   text-decoration: none;
+}
+.header_header_nav>li:last-child>div>ul>li>a:hover{
+  color:#cc2e36;
+  border:1px dashed #999999;
+}
+/* footer 部分的样式 */
+.header_foot_sec{
+  width:100%;
+  height:141px;
+  margin:0 190px;
+}
+.footer_logo,.footer_github,.footer_section{
+  float: left;
+}
+  /* logo图标样式 */
+.footer_logo>div{
+  width:200px;
+  height:140px;
+  background:#fff url("../img/huaihai.jpg") no-repeat 0px -46px;
+  background-size:200px 200px; 
+}
+  /* 搜索框及商品导航 */
+.footer_section{
+  width:750px;
+  margin:0 auto;
+  margin-left:50px;
+  padding:38px 0px 28px;
+}
+  /* 搜索框样式 */
+.footer_section_search{
+ position: relative;
+}
+.footer_section_search>input{
+  width:500px;
+  height:40px;
+  padding:5px 10px;
+  box-sizing: border-box;
+  outline:none;
+  border:2px solid #f6f6f6;
+  border-right:none;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius:5px;
+}
+.footer_section_search>button{
+  width:52px;
+  height:40px;
+  outline: none;
+  border:2px solid #f6f6f6;
+  border-left:none;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  position: absolute;
+  left:500px;
+  background:#fff url("../img/so-icon.png") no-repeat 16px 10px;
+}
+.footer_section_search>button:hover{
+  cursor: pointer;
+}
+.footer_section_search>button:active{
+  background-image: none;
+}
+  /* 商品导航 */
+.footer_section_list{
+  margin-top:15px;
+  width:400px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.footer_section_list>li>a{
+  text-decoration: none;
+  color:#cc2e36;
+  border:1px dashed rgba(246,246,246,0);
+  border-radius: 5px;
+  padding:2px;
+}
+.footer_section_list>li>a:hover{
+  color:#999999;
+}
+.footer_section_list>li>a:active{
+  border:1px dashed #999999;
+}
+  /* 右侧图标 */
+  .footer_github{
+    position: relative;
+  }
+.footer_github>div{
+  width:120px;
+  height:120px;
+  border-radius: 25%;
+  background:url("../img/liang3.png") no-repeat;
+  background-size: 120px 120px;
+  margin-top:10px;
+  position: absolute;
+  left:2px;
+  perspective: 1px;
+}
+.footer_github>div:hover{
+  animation: github 2s linear 0.1s infinite; 
+}
+@keyframes github{
+  0%{
+    transform: rotateY(180deg);
+    border-radius: 50%;
+  }
+  100%{
+    transform: rotateY(360deg);
+    border-radius: 50%;
+  }
 }

@@ -4,7 +4,7 @@
   margin:0;
   padding:0;
 }
-/* 定义共同字体大小 */
+/* 怀海字体字体大小 */
 .hh_comm_font{
   font-size:0.75rem;
 }
@@ -15,7 +15,7 @@
 .hh_text_dec{
   text-decoration: none;
 }
-/* 字体的颜色 */
+/* 怀海字体字体的颜色 */
 .hh_font_color{
   color:#999999;
 }
@@ -23,3 +23,22 @@
 .hh_red{
   color:#cc2e36;
 }
+/* 定义引用头和低的样式 */
+.huaihai_comm_header,.huaihai_comm_footer{
+  width:100%;
+}
+.huaihai_comm_header{
+  height:181px;
+}
+.huaihai_comm_footer{
+  height:250px;
+}
+
+
+
+
+
+
+
+
+

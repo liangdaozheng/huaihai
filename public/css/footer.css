@@ -1,0 +1,69 @@
+/* 共用底部的样式 */
+.footer_footer{
+  width:100%;
+  height:250px;
+  background-color:#f6f6f6;
+}
+.footer_footer_section{
+  width:1190px;
+  height:238px;
+  margin:0 auto;
+  background-color: #f6f6f6;
+}
+.footer_footer_section::before{
+  content:"";
+  display: table;
+}
+.footer_footer_section strong{
+  display: block;
+  text-align: center;
+  margin-top:40px;
+}
+.footer_footer_section p{
+  font-size: 0.75px;
+  color: #999999;
+  text-align: center;
+  margin-top:10px;
+}
+.footer_footer_section>div{
+  width:300px;
+  height:18px;
+  margin:0 auto;
+  margin-top:75px;
+  position: relative;
+}
+.footer_footer_section>div>div{
+  width:82px;
+  height:18px;
+  background:url("../img/to_mailme.png") no-repeat;
+  position: absolute;
+  animation: to_mailme 10s linear infinite;
+}
+.footer_footer_section>div>div:hover{
+  cursor: pointer;
+  animation-play-state: paused;
+}
+.footer_footer_section>div:active div{
+  display: none;
+}
+@keyframes to_mailme {
+  0%{
+    left:1px;
+  }
+  25%{
+    left:150;
+  }
+  50%{
+     left:300;
+     transform:rotateY(0deg);
+  }
+  74%{
+    right:-150px;
+  }
+  75%{
+    left:150px;
+  }
+  100%{
+     left:0px;
+  }
+}
