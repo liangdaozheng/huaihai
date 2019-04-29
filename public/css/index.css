@@ -66,35 +66,63 @@
   /* 上部分 */
 .index_right_msg .right_msg_top>a{
   display: block;
-  padding-left: 5px;
+  margin-top:9px;
+  margin-bottom:20px;
+  padding: 5px;
+  position: relative;
+}
+.index_right_msg .right_msg_top>a:hover{
+  background-color: #cc2e36;
+}
+.index_right_msg .right_msg_top>a:first-child:hover em{
+  background-position:  0px -185px;
 }
 .index_right_msg .right_msg_top>a>em{
   display: inline-block;
   width:100%;
-  height:22px;
-  margin-top:9px;
-  margin-bottom:20px;
+  height:22px; 
   background: url("../img/sidebar-icon.png") no-repeat;
 }
+  /* 定位小图标 */
+.index_right_msg .right_msg_top>a:first-child>em{
+  background-position: 0px 6px;
+}
 .index_right_msg .right_msg_top>a:nth-child(2)>em{
-  background-position: 0px -30px;
+  background-position: 0px -28px;
 }
 .index_right_msg .right_msg_top>a:nth-child(3)>em{
-  background-position: 0px -83px;
+  background-position: 0px -80px;
 }
 .index_right_msg .right_msg_top>a:nth-child(4)>em{
-  background-position: 0px -56px;
+  background-position: 0px -53px;
 }
 .index_right_msg .right_msg_top>a:last-child>em{
   background: url("../img/phone.png") no-repeat;
   background-size: 18px 18px;
 }
+  /* 滑块的样式 */
 .index_right_msg .right_msg_top>a>div{
-  display: none;
+  width:68px;
+  position: absolute;
+  top:0px;
+  right:-88px;
+  background-color: #cc2e36;
+  border-radius: 5px 0 0 5px;
+  z-index:-2;
+  line-height: 37px;
+  color:#fff;
+  font-size:0.75rem;
+  text-align: center;
+  
+}
+.index_right_msg .right_msg_top>a:hover div{
+  right:35px;
+  background-color: #cc2e36;
+  transition:  0.5s linear;
 }
   /* 下边部分 */
 .right_msg_bottom {
-  margin-top:290px;
+  margin-top:350px;
 }
 .index_right_msg .right_msg_bottom>a{
    display: block;
@@ -106,14 +134,22 @@
   margin-top: 20px;
   background: url("../img/sidebar-icon.png") no-repeat;
 }
+  /* 小图标的定位 */
 .index_right_msg .right_msg_bottom>a:first-child>div{
-  background-position:0px -140px;
+  background-position:0px -142px;
 }
 .index_right_msg .right_msg_bottom>a:last-child>div{
   background-position:0px -168px;
 }
-.index_right_msg .right_msg_bottom>a:hovar{
+  /* 效果样式 */
+.index_right_msg>.right_msg_bottom>a:last-child:hover{
   background-color:#cc2e36;
+}
+.index_right_msg>.right_msg_bottom>a:first-child{
+  transition:all 0.5s linear ;
+}
+.index_right_msg>.right_msg_bottom>a:first-child:hover div{
+  transform: scale(1.3);
 }
 
 
