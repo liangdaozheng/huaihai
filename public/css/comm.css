@@ -39,7 +39,15 @@ a{
 ul>li{
   list-style: none;
 }
-
+ul::before{
+  content:"";
+  display: table;
+}
+ul::after{
+  content:"";
+  display: block;
+  clear: both;
+}
 
 
 

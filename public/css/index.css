@@ -622,24 +622,520 @@
 .index_product_groub .old_groub_pro .old_pro_list .list_border ul li:nth-child(9) a{
   background: url("../img/index/ntesJCXPE5.png") no-repeat center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* 特惠产品专区 */
+.index_cheap_bg{
+  background-color:#fff;
+}
+.index_cheap_bg .index_cheap_product{
+  width:1190px;
+  height:auto;
+  margin:0 auto;
+  background-color:#f6f6f6;
+  overflow: hidden;
+}
+/* 特惠产品块 */
+.index_cheap_bg .index_cheap_product .cheap_product_list{
+  width:100%;
+  height:auto;
+  border-bottom: 40px solid #fff;
+}
+  /* 上特惠的头部 */
+.index_cheap_bg .index_cheap_product .cheap_product_list .cheap_list_top{
+  width:100%;
+  height:72px;
+  background-color:#fff;
+}
+.index_cheap_bg .index_cheap_product .cheap_product_list .cheap_list_top .title{
+  width:180px;
+  height:72px;
+  line-height: 72px;
+  float: left;
+}
+.index_cheap_bg .index_cheap_product .cheap_product_list .cheap_list_top .title h3{
+  font-size: 20px;
+  color:#333;
+  font-weight: 500px;
+}
+.index_cheap_bg .index_cheap_product .cheap_product_list .cheap_list_top .nav{
+  max-width:800px;
+  height:25px;
+  float: right;
+  overflow: hidden;
+  padding-top:30px;
+}
+.index_cheap_bg .index_cheap_product .cheap_product_list .cheap_list_top .nav::before{
+  contain: "";
+  display: table;
+}
+.index_cheap_bg .index_cheap_product .cheap_product_list .cheap_list_top .nav::after{
+  content:"";
+  display: block;
+  clear:none;
+}
+.index_cheap_bg .index_cheap_product .cheap_product_list .cheap_list_top .nav li{
+  position: relative;
+  color:#cc3341;
+  font-size: 14px;
+}
+.index_cheap_bg .index_cheap_product .cheap_product_list .cheap_list_top .nav li::before{
+  position: absolute;
+  content:"";
+  top:24px;
+  left:0px;
+  height:1px;
+  width:100%;
+  background-color:#cc2e36;
+}
+/* 上特惠的主体部分 */
+.index_cheap_bg .index_cheap_product .cheap_product_list .cheap_list_main{
+  width:100%;
+  height:540px;
+  background-color:#fff;
+}
+.index_cheap_bg .index_cheap_product .cheap_product_list .cheap_list_main .list_tehui{
+  position: absolute;
+  width:1190px;
+  max-height: 540px;
+  overflow: hidden;
+  border-left:1px solid #f6f6f6;
+}
+.index_cheap_bg .index_cheap_product .cheap_product_list .cheap_list_main .list_tehui::before{
+  content:"";
+  display: table;
+}
+.index_cheap_bg .index_cheap_product .cheap_product_list .cheap_list_main .list_tehui::after{
+  content: "";
+  display: block;
+  clear:both;
+}
+.index_cheap_bg .index_cheap_product .cheap_product_list .cheap_list_main .list_tehui li{
+  width:238px;
+  height:270px;
+  float: left;
+  box-sizing: border-box;
+  border:1px solid #f6f6f6;
+  text-align: center;
+  position: relative;
+  padding: 0 16px;
+  border-left:none;
+}
+.index_cheap_bg .index_cheap_product .cheap_product_list .cheap_list_main .list_tehui li a .img{
+  width:120px;
+  text-align: center;
+  overflow: hidden;
+  padding-top:30px;
+  margin:0 auto ;
+  transition: all 0.5s;
+}
+.index_cheap_bg .index_cheap_product .cheap_product_list .cheap_list_main .list_tehui li a .img:hover{
+  transform:scale(1.1)
+}
+.index_cheap_bg .index_cheap_product .cheap_product_list .cheap_list_main .list_tehui li a .img img{
+  display: inline-block;
+  width:120px;
+  height:120px;
+}
+.index_cheap_bg .index_cheap_product .cheap_product_list .cheap_list_main .list_tehui li a .text{
+  margin-top:40px;
+  line-height: 30px;
+}
+.index_cheap_bg .index_cheap_product .cheap_product_list .cheap_list_main .list_tehui li a .text p{
+  color:#333;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+}
+.index_cheap_bg .index_cheap_product .cheap_product_list .cheap_list_main .list_tehui li a .text span{
+  color:#cc3341;
+  font-size: 16px;
+}
+/* 茅台特惠专区 */
+.index_cheap_bg .index_cheap_product .cheap_maotai_list{
+  width:100%;
+  height:auto;
+  border-bottom: 40px solid #fff;
+}
+  /* 茅台特惠专区的头部 */
+.index_cheap_bg .index_cheap_product .cheap_maotai_list .maotai_list_top{
+  width:100%;
+  height:60px;
+  background-color:#fff;
+}
+.index_cheap_bg .index_cheap_product .cheap_maotai_list .maotai_list_top .title{
+  width:180px;
+  height:60px;
+  line-height: 60px;
+  float: left;
+  padding-left: 16px;
+  position: relative;
+}
+.index_cheap_bg .index_cheap_product .cheap_maotai_list .maotai_list_top .title h3{
+  font-size: 20px;
+  color:#333;
+  font-weight: 500;
+}
+.index_cheap_bg .index_cheap_product .cheap_maotai_list .maotai_list_top .title::before{
+  content: "";
+  width:6px;
+  height:21px;
+  background-color:#cc3341;
+  position: absolute;
+  top:20px;
+  left:0px;
+}
+.index_cheap_bg .index_cheap_product .cheap_maotai_list .maotai_list_top .nav{
+  max-width:800px;
+  height:19px;
+  float:right;
+  overflow: hidden;
+  padding-top:23px;
+}
+.index_cheap_bg .index_cheap_product .cheap_maotai_list .maotai_list_top .nav li{
+  float: left;
+  padding-right:10px;
+}
+.index_cheap_bg .index_cheap_product .cheap_maotai_list .maotai_list_top .nav li a{
+  padding:0 5px;
+  color:#333;
+}
+  /* 茅台特惠专区的主体 */
+.index_cheap_bg .index_cheap_product .cheap_maotai_list .maotai_list_main{
+  width:100%;
+  height:540px;
+  background-color:#fff;
+  overflow: hidden;
+}
+.index_cheap_bg .index_cheap_product .cheap_maotai_list .maotai_list_main .left{
+  width:238px;
+  float: left;
+}
+.index_cheap_bg .index_cheap_product .cheap_maotai_list .maotai_list_main .left img{
+  width:238px;
+}
+.index_cheap_bg .index_cheap_product .cheap_maotai_list .maotai_list_main .right{
+  width:952px;
+  height:540px;
+  overflow: hidden;
+  float: right;
+}
+.index_cheap_bg .index_cheap_product .cheap_maotai_list .maotai_list_main .right ul li{
+  width:238px;
+  height:270px;
+  float: left;
+  box-sizing: border-box;
+  border:1px solid #f6f6f6;
+  text-align: center;
+  position: relative;
+  padding: 0 16px;
+  border-left:none;
+}
+.index_cheap_bg .index_cheap_product .cheap_maotai_list .maotai_list_main .right ul li a .img{
+  width:120px;
+  height:120px;
+  text-align: center;
+  overflow: hidden;
+  padding-top:30px;
+  margin:0 auto ;
+  transition: all 0.5s;
+}
+.index_cheap_bg .index_cheap_product .cheap_maotai_list .maotai_list_main .right ul li a .img:hover{
+  transform: scale(1.1)
+}
+.index_cheap_bg .index_cheap_product .cheap_maotai_list .maotai_list_main .right ul li a .img img{
+  width:100%;
+  height:100%;
+}
+.index_cheap_bg .index_cheap_product .cheap_maotai_list .maotai_list_main .right ul li a .text{
+  margin-top:40px;
+  line-height: 30px;
+}
+.index_cheap_bg .index_cheap_product .cheap_maotai_list .maotai_list_main .right ul li a .text p{
+  color:#333;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+}
+.index_cheap_bg .index_cheap_product .cheap_maotai_list .maotai_list_main .right ul li a .text span{
+  color:#cc3341;
+  font-size: 16px;
+}
+/* 七个楼层的样式 */
+.index_floors_pro{
+  width:1190px;
+  height:auto;
+  margin:0 auto;
+  background-color:#f6f6f6;
+  overflow: hidden;
+}
+/* 楼层的样式 */
+.index_floors_pro .floor_pro_sum{
+  width:100%;
+  height:auto;
+  float: left;
+}
+  /* 楼层头部导航 */
+.index_floors_pro .floor_pro_sum .floor_sum_top{
+  width:100%;
+  height:60px;
+  padding-top:10px;
+  background-color:#f6f6f6;
+}
+.index_floors_pro .floor_pro_sum .floor_sum_top .title{
+  width:160px;
+  height:60px;
+  line-height: 60px;
+  float: left;
+  padding-left: 16px;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.index_floors_pro .floor_pro_sum .floor_sum_top .title h3{
+  font-size: 20px;
+  color:#5eb6c2;
+  font-weight: 500;
+}
+.index_floors_pro .floor_pro_sum .floor_sum_top .title::before{
+  content: "";
+  width:6px;
+  height:21px;
+  background-color:#5eb6c2;
+  position: absolute;
+  top:20px;
+  left:0px;
+}
+.index_floors_pro .floor_pro_sum .floor_sum_top .nav{
+  max-width:800px;
+  height:19px;
+  float:right;
+  overflow: hidden;
+  padding-top:23px;
+}
+.index_floors_pro .floor_pro_sum .floor_sum_top .nav li{
+  float: left;
+  padding-right:10px;
+}
+.index_floors_pro .floor_pro_sum .floor_sum_top .nav li a{
+  padding:0 5px;
+  color:#333;
+}
+ /* 楼层主体 图片部分 */
+.index_floors_pro .floor_pro_sum .floor_sum_main{
+  width:100%;
+  height:300px;
+  float:left;
+}
+.index_floors_pro .floor_pro_sum .floor_sum_main .big_pic{
+  float: left;
+  margin-right: 10px;
+}
+.index_floors_pro .floor_pro_sum .floor_sum_main .big_pic a .img{
+  width:230px;
+  height:292px;
+  text-align: center;
+  overflow:hidden;
+  transition:all 0.3s linear;
+}
+.index_floors_pro .floor_pro_sum .floor_sum_main .big_pic a .img img{
+  width:230px;
+  height:292px;
+  margin-right:10px;
+}
+.index_floors_pro .floor_pro_sum .floor_sum_main .small_pic{
+  width:230px;
+  height:292px;
+  float: left;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  padding:0 16px;
+  background-color:#fff;
+  transition:all 0.3s linear;
+  margin-right:10px;
+}
+.index_floors_pro .floor_pro_sum .floor_sum_main .small_pic a .img{
+  width:120px;
+  height:120px;
+  text-align: center;
+  margin:40px auto 20px;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.index_floors_pro .floor_pro_sum .floor_sum_main .small_pic a .img img{
+  width:120px;
+  height:120px;
+}
+.index_floors_pro .floor_pro_sum .floor_sum_main .small_pic a .text{
+  margin-top:45px;
+}
+.index_floors_pro .floor_pro_sum .floor_sum_main .small_pic a .text p{
+  font-size: 12px;
+  color:#666;
+  margin-top:6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height:18px;
+}
+.index_floors_pro .floor_pro_sum .floor_sum_main .small_pic a .text span{
+  display: block;
+  margin-top:8px;
+  color:#cc3341;
+  font-size: 16px;
+}
+.index_floors_pro .floor_pro_sum .floor_sum_main .big_pic a .img:hover,.index_floors_pro .floor_pro_sum .floor_sum_main .small_pic:hover{
+  box-shadow: 0 5px 6px rgba(0,0,0,0.1);
+  transform:translate3d(0,-2px,0);
+}
+.index_floors_pro .floor_pro_sum .floor_sum_main .small_pic a .img:hover{
+  transform: scale(1.1);
+}
+.index_floors_pro .floor_pro_sum .floor_sum_main .small_pic:last-child{
+  margin-right:0;
+}
+/* 修改楼层的标题颜色 */
+.index_floors_pro .floor_pro_sum:first-child .floor_sum_top .title h3{
+  color:#47a274;
+}
+.index_floors_pro .floor_pro_sum:first-child .floor_sum_top .title::before{
+  background-color:#47a274;
+}
+.index_floors_pro .floor_pro_sum:nth-child(2) .floor_sum_top .title h3{
+  color:#e946b9;
+}
+.index_floors_pro .floor_pro_sum:nth-child(2) .floor_sum_top .title::before{
+  background-color:#e946b9;
+}
+/* 底部服务部分 */
+.index_footer_bg{
+  background-color:#fff;
+}
+.index_footer_bg .index_footer_fuwu{
+  width:1190px;
+  height:auto;
+  overflow: hidden;
+  margin:0 auto ;
+  background: #f6f6f6;
+}
+/* 底部服务的头部 */
+.index_footer_bg .index_footer_fuwu .footer_fuwu_top{
+  width:100%;
+  height:98px;
+  line-height:98px;
+  background-color:#fff;
+  margin:0 auto;
+  color:#333;
+}
+.index_footer_bg .index_footer_fuwu .footer_fuwu_top ul li{
+  width:25%;
+  padding-left: 70px;
+  box-sizing: border-box;
+  float: left;
+  position: relative;
+}
+.index_footer_bg .index_footer_fuwu .footer_fuwu_top ul li div{
+  float: left;
+  line-height: 73px;
+}
+.index_footer_bg .index_footer_fuwu .footer_fuwu_top ul li div img{
+  width:24px;
+  height:24px;
+  margin-top:38px;
+}
+.index_footer_bg .index_footer_fuwu .footer_fuwu_top ul li span{
+  display: block;
+  float: left;
+  margin-left:10px;
+  font-size: 14px;
+}
+.index_footer_bg .index_footer_fuwu .footer_fuwu_top ul li::after{
+  content:"";
+  display: block;
+  clear: both;
+}
+.index_footer_bg .index_footer_fuwu .footer_fuwu_top ul li:not(:last-child)::after{
+  content:"";
+  position: absolute;
+  top:34px;
+  right:0px;
+  background-color: #ebebeb;
+  width:1px;
+  height:34px;
+}
+  /* 底部服务的下部分内容*/
+.index_footer_bg .index_footer_fuwu .footer_fuwu_nav{
+  width:100%;
+  height:120px;
+  border-top:1px solid #f6f6f6;
+  background-color:#fff;
+  clear:both;
+  padding:30px 0px;
+  margin:0 auto;
+  position: relative;
+}
+  /* 底部服务的下部分内容 左侧部分 */
+.index_footer_bg .index_footer_fuwu .footer_fuwu_nav .footer_post_left{
+  float: left;
+}
+.index_footer_bg .index_footer_fuwu .footer_fuwu_nav .footer_post_left .main{
+  width:179px;
+  height:120px;
+  float: left;
+}
+.index_footer_bg .index_footer_fuwu .footer_fuwu_nav .footer_post_left .main h3{
+  height:40px;
+  line-height: 20px;
+}
+.index_footer_bg .index_footer_fuwu .footer_fuwu_nav .footer_post_left .main h3 a{
+  font-size: 14px;
+  color:#333;
+  font-weight: 500;
+}
+.index_footer_bg .index_footer_fuwu .footer_fuwu_nav .footer_post_left .main ul{
+  width:200px;
+}
+.index_footer_bg .index_footer_fuwu .footer_fuwu_nav .footer_post_left .main ul li{
+  line-height: 25px;
+}
+.index_footer_bg .index_footer_fuwu .footer_fuwu_nav .footer_post_left .main ul li a{
+  color:#999999;
+}
+  /* 底部服务的下部分内容 右侧部分 */
+.index_footer_bg .index_footer_fuwu .footer_fuwu_nav .footer_post_right{
+  width:294px;
+  float: left;
+  text-align: center;
+}
+.index_footer_bg .index_footer_fuwu .footer_fuwu_nav .footer_post_right p{
+  font-size: 16px;
+  color:#cc3341;
+  margin-bottom: 3px;
+}
+.index_footer_bg .index_footer_fuwu .footer_fuwu_nav .footer_post_right span{
+  color:#666;
+}
+.index_footer_bg .index_footer_fuwu .footer_fuwu_nav .footer_post_right div{
+  margin:10px 0 13px;
+}
+.index_footer_bg .index_footer_fuwu .footer_fuwu_nav .footer_post_right div a{
+  display: inline-block;
+  width:122px;
+  height:30px;
+  border:1px solid #cc2e36;
+  line-height: 32px;
+  color:#cc3341;
+  padding-left: 22px;
+  background:url("../img/online.png") no-repeat 24px;
+  background-size: 14px;
+}
+.index_footer_bg .index_footer_fuwu .footer_fuwu_nav::after{
+  content:"";
+  display: block;
+  clear: both;
+  position: absolute;
+  top:30px;
+  right:294px;
+  background-color: #999999;
+  width:1px;
+  height:121px;
+}

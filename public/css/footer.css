@@ -32,7 +32,8 @@
   margin-top:75px;
   position: relative;
 }
-.footer_footer_section>div>div{
+.footer_footer_section>div>div>a{
+  display: block;
   width:82px;
   height:18px;
   background:url("../img/to_mailme.png") no-repeat;
@@ -43,9 +44,9 @@
   cursor: pointer;
   animation-play-state: paused;
 }
-.footer_footer_section>div:active div{
+/* .footer_footer_section>div:active div{
   display: none;
-}
+} */
 @keyframes to_mailme {
   0%{
     left:1px;
