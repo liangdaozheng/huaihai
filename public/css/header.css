@@ -166,7 +166,7 @@
   background-size: 120px 120px;
   margin-top:10px;
   position: absolute;
-  left:2px;
+  left:-10px;
   perspective: 1px;
 }
 .footer_github>div:hover{

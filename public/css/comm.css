@@ -5,7 +5,10 @@
   padding:0;
 }
 /* 怀海字体字体大小 */
-.hh_comm_font,body{
+body{
+  font:0.75rem "Microsoft YaHei";
+}
+.hh_comm_font{
   font-size:0.75rem;
 }
 .hh_comm_bg{

@@ -19,7 +19,11 @@
   text-align: center;
   margin-top:40px;
 }
-.footer_footer_section p{
+.footer_footer_section em{
+  display: block;
+  width:100%;
+  height:16px;
+  font-style: normal;
   font-size: 0.75px;
   color: #999999;
   text-align: center;
