@@ -51,8 +51,15 @@ ul::after{
   display: block;
   clear: both;
 }
-
-
+.clearboth::before{
+  content:"";
+  display: table;
+}
+.clearboth::after{
+  content: "";
+  display: block;
+  clear: both;
+}
 
 
 
