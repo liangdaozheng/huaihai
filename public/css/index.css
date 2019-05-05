@@ -110,18 +110,20 @@
   right:-88px;
   background-color: #cc2e36;
   border-radius: 5px 0 0 5px;
-  z-index:-2;
+  z-index:-1;
   line-height: 37px;
   color:#fff;
   font-size:0.75rem;
   text-align: center;
-  
+  /* transition-duration: 0.4; */
 }
 .index_right_msg .right_msg_top>a:hover div{
   right:35px;
   background-color: #cc2e36;
-  transition:  0.5s linear;
+  transition:all  0.5s linear;
+ 
 }
+
   /* 下边部分 */
 .right_msg_bottom {
   margin-top:350px;
