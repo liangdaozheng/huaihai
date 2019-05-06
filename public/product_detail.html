@@ -480,21 +480,21 @@
 													</tbody>
 												</table>
 												<!-- 更多参数行 -->
-												<div class="show_more_row"><a href="#">更多参数>></a></div>
+												<div class="show_more_row"><a href="#" onclick="getPics()">更多参数>></a></div>
 												<!-- 图片 -->
 												<div class="pics_column">
-													<img src="product/tatail/cang/4DbyjG8aQp.jpg" alt="">
-													<img src="product/tatail/cang/4DbyjG8aQp.jpg" alt="">
-													<img src="product/tatail/cang/4DbyjG8aQp.jpg" alt="">
-													<img src="product/tatail/cang/4DbyjG8aQp.jpg" alt="">
-													<img src="product/tatail/cang/4DbyjG8aQp.jpg" alt="">
-													<img src="product/tatail/cang/4DbyjG8aQp.jpg" alt="">
-													<img src="" alt="">
-													<img src="" alt="">
-													<img src="" alt="">
-													<img src="" alt="">
-													<img src="" alt="">
-													<img src="" alt="">
+													<img id="img1" src="" alt="">
+													<img id="img2" src="" alt="">
+													<img id="img3" src="" alt="">
+													<img id="img4" src="" alt="">
+													<img id="img5" src="" alt="">
+													<img id="img6" src="" alt="">
+													<img id="img7" src="" alt="">
+													<img id="img8" src="" alt="">
+													<img id="img9" src="" alt="">
+													<img id="img10" src="" alt="">
+													<img id="img11" src="" alt="">
+													<img id="img12" src="" alt="">
 												</div>
 											</div>
 										</div>
@@ -528,7 +528,7 @@
 											<!-- 顶头 -->
 											<div class="title">商品评论</div>
 											<!-- 一行 -->
-											<div class="rows_one">
+											<div class="rows_one clearboth">
 												<div class="left">
 													<div class="leftto">好评率</div>
 													<div class="leftnum"><span>100%</span></div>
@@ -540,8 +540,14 @@
 														<div class="pingjia">好评( <span>100%</span> )</div>
 														<div class="tiao"><div></div></div>
 													</div>
-													<div></div>
-													<div></div>
+													<div class="rightrow">
+														<div class="pingjia">中评( <span>&nbsp;&nbsp;0%&nbsp;&nbsp;</span> )</div>
+														<div class="tiao"><div></div></div>
+													</div>
+													<div class="rightrow">
+														<div class="pingjia">差评( <span>&nbsp;&nbsp;0%&nbsp;&nbsp;</span> )</div>
+														<div class="tiao"><div></div></div>
+													</div>
 												</div>
 											</div>
 											<!-- 二行 -->
@@ -552,16 +558,16 @@
 												<li><a href="#">差评( <span>0</span> )</a></li>
 											</ul>
 											<!-- 三行 -->
-											<div class="rows_three">
-												<div class="mainrong">
+											<div class="rows_three clearboth">
+												<div class="mainrong clearboth">
 													<div class="rongleft">
-														<div class="username"><img src="" alt=""><span>匿名</span></div>
+														<div class="username"><img src="img/accountImg.png" alt=""><span>匿名</span></div>
 														<div class="datetime">2099-12-31 23:59:59</div>
 													</div>
 													<div class="rongright">
-														<div class="righttitle"><img src="" alt="">习酒 窖藏1998 53%vol 500ml500ml*酱香*53%vol</div>
+														<div class="righttitle"><img src="img/star5.png" alt=""><span>习酒 窖藏1998 53%vol 500ml500ml*酱香*53%vol</span></div>
 														<div class="rightword">两人对酌山花开  一杯一杯复一杯  我醉欲眠卿且去  明朝有意抱琴来</div>
-														<div class="rightimg"><a href="#"><img src="" alt=""></a></div>
+														<div class="rightimg"><a href="#"><img src="img/pic_default.png" alt=""></a></div>
 													</div>
 												</div>
 											</div>
@@ -577,5 +583,6 @@
 	</section>
 	<!--引入底部-->
 	<iframe src="footer.html" frameborder="0" scrolling="no" class="huaihai_comm_footer"></iframe>
+	<script type="text/javascript" src="javascript/ceshi_router.js"></script>
 </body>
 </html>
