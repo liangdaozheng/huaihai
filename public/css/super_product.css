@@ -1,1 +1,76 @@
 /* 精品页面样式 */
+.super_main_sect{
+  width:100%;
+  height:auto;
+  background: #f6f6f6;
+}
+/* 背景图片的样式 */
+.super_main_sect .top_bg_pic{
+  width:100%;
+  height:400px;
+}
+.super_main_sect .top_bg_pic .bg_pic_dog img{
+  width:100%;
+  height:400px;
+}
+/* 优惠卷的导航 */
+.super_main_sect .bottom_nav_none{
+  width:1190px;
+  min-height: 500px;
+  margin:0 auto;
+}
+.bottom_nav_none .nav_none_main .navmainlist{
+  width:1190px;
+  height:60px;
+}
+.nav_none_main .navmainlist ul {
+  width:100%;
+  height:60px;
+}
+.nav_none_main .navmainlist ul li{
+  width:237px;
+  height:60px;
+  line-height: 60px;
+  border-left:1px solid #ededed;
+  float: left;
+  text-align: center;
+  background: #fff;
+  margin-top:-30px;
+  position: relative;
+}
+.nav_none_main .navmainlist ul li:first-child{
+  border-left: none;
+}
+.nav_none_main .navmainlist ul .active{
+  background:#cc3341;
+}
+.nav_none_main .navmainlist ul li a{
+  display: block;
+  width:237px;
+  height:60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 16px;
+  color:#333;
+}
+.nav_none_main .navmainlist ul .active a{
+  color:#fff;
+}
+.nav_none_main .navsubkong ul{
+  width:100%;
+  height:auto;
+}
+.nav_none_main .navsubkong ul .navsub_no{
+  width:100%;
+  height:500px;
+  line-height: 500px;
+  text-align: center;
+  font-size: 14px;
+  color:#333;
+  background: #fff;
+}
+
+
+
+
+

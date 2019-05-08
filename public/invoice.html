@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!--页面名称-->
+	<title>怀海商城</title>
+	<title>发票</title>
+	<!-- 引入图标 -->
+	<link rel="icon" href="favicon.ico">
+	<!--引入css文件-->
+	<link rel="stylesheet" href="css/comm.css">
+	<link rel="stylesheet" href="css/invoice.css">
+</head>
+<body>
+  <!--引入头部-->
+  <iframe src="header.html" frameborder="0" scrolling="no" class="huaihai_comm_header"></iframe>
+  <!-- 发票主体内容 -->
+  <section class="invoice_sec_main">
+    <!-- 查询前的页面 -->
+    <div class="mainlist_before">
+      <div class="mainlist_before_row">
+        <div class="before_row_div">
+          <!-- 提示内容 -->
+          <div class="row_div_main">
+            <div class="title">开票信息补充</div>
+            <ul>
+              <li>1、我公司依法开具增值税发票。</li>
+              <li>2、下单后若我公司尚未开具发票，可根据查询结果修改开票信息。</li>
+              <li>3、下单后若我公司已经开具电子发票，可根据查询结果下载电子发票。</li>
+              <li>4、请消费者根据平台订单号、订单金额、收货人电话号码查询订单发票信息。</li>
+              <li>5、我公司开具的增值税专用发票，将随货物一并邮寄至收货地址，请注意查收。</li>
+              <li>6、电子发票是税局认可的有效凭证，其法律效力、基本用途及使用规定同纸质发票，如需纸质票可自行下载打印。</li>
+              <li>7、在云商平台付款的非电商公司发货的订单，请消费者向发货网点索取销售发票。</li>
+            </ul>
+          </div>
+          <!-- 查询框 -->
+          <div class="row_div_list">
+              <ul>
+                  <li>
+                    <span>来源单号:</span>
+                    <input type="text">
+                  </li>
+                  <li>
+                    <span>订单金额:</span>
+                    <input type="text">
+                  </li>
+                  <li>
+                    <span>收货人手机号:</span>
+                    <input type="text">
+                  </li>
+                </ul>
+          </div>
+          <!-- 查询按钮 -->
+          <div class="row_div_btn">
+            <a href="javascript:;">查询</a>
+            <a href="javascript:;">重置</a>
+          </div>
+          <!-- 结果显示区 -->
+          <div class="row_div_result">
+            <!-- 无结果 -->
+            <div class="nores">
+              <img src="" alt="">
+              <p>请在上面输入内容查询发票</p>
+            </div>
+            <!-- 结果显示 -->
+            <div class="visiresult" >
+              <div class="header_tit">
+                  发票详情
+                  <a href="javascript:;">&times;</a>
+              </div>
+              <div class="body_nav">
+                <!-- 主体 -->
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>发票类型</td>
+                      <td>普通发票</td>
+                    </tr>
+                    <tr>
+                      <td>发票抬头</td>
+                      <td>张xx</td>
+                    </tr>
+                    <tr>
+                      <td>纳税人识别号</td>
+                      <td>111111999912218998</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- 安钮 -->
+                <div class="btn">
+                  <a href="javascript:;">确定</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 查询后的页面提示 同上的显示结果块 -->
+    <div class="mainlist_after"></div>
+  </section>
+  <!--引入底部-->
+	<iframe src="footer.html" frameborder="0" scrolling="no" class="huaihai_comm_footer"></iframe>
+</body>
+</html>

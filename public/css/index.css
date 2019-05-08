@@ -107,15 +107,15 @@
   width:68px;
   position: absolute;
   top:0px;
-  right:-88px;
+  right:-188px;
   background-color: #cc2e36;
   border-radius: 5px 0 0 5px;
   z-index:-1;
-  line-height: 37px;
+  line-height: 35px;
   color:#fff;
   font-size:0.75rem;
   text-align: center;
-  /* transition-duration: 0.4; */
+  /* transition-duration: 2s; */
 }
 .index_right_msg .right_msg_top>a:hover div{
   right:35px;
