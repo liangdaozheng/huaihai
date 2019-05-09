@@ -1,1 +1,189 @@
 /* 发票查询页样式 */
+.invoice_sec_main{
+  width:100%;
+  height:auto;
+  /* background: #f6f6f6; */
+}
+/* 发票 */
+.invoice_sec_main .mainlist_before{
+  width:100%;
+}
+.invoice_sec_main .mainlist_before .mainlist_before_row{
+  width:1190px;
+  margin: auto;
+}
+.mainlist_before_row .before_row_div{
+  width:100%;
+  margin:0 auto;
+}
+/* 文字提示框 */
+.mainlist_before_row .before_row_div .row_div_main{
+  width:803px;
+  margin:8px auto 10px;
+  padding-bottom: 15px;
+  background: #fffdf9;
+  border:1px solid #fff2db;
+}
+.before_row_div .row_div_main .title{
+  font-size: 14px;
+  height:40px ;
+  line-height: 40px;
+  color:#333;
+  font-weight: 700;
+  margin-left:95px;
+}
+.before_row_div .row_div_main ul{
+  height:auto;
+  margin-left:95px;
+}
+.before_row_div .row_div_main ul li{
+  color:#666;
+  line-height: 25px;
+  font-size: 12px;
+}
+/* 表单控件区 */
+.mainlist_before_row .before_row_div .row_div_list{
+  width:345px;
+  height:auto;
+  margin:0 auto;
+  padding-top:35px;
+}
+.mainlist_before_row .before_row_div .row_div_list ul li{
+  width:100%;
+  height:50px;
+}
+.mainlist_before_row .before_row_div .row_div_list ul li span{
+  display: block;
+  float: left;
+  width:100px;
+  height:32px;
+  line-height:32px;
+  margin-right:10px;
+  text-align: right;
+}
+.mainlist_before_row .before_row_div .row_div_list ul li input{
+  float: left;
+  background: #fff;
+  border:1px solid #ededed;
+  width:230px;
+  height:32px;
+  outline:none;
+  border-radius: 5px;
+  text-indent: 10px;
+}
+/* 按钮行 */
+.mainlist_before_row .before_row_div .row_div_btn{
+  width:310px;
+  height:4px;
+  padding-left:85px;
+  padding-top:25px;
+  margin:0 auto 40px;
+}
+.mainlist_before_row .before_row_div .row_div_btn a{
+  display: block;
+  width:115px;
+  height:30px;
+  line-height: 30px;
+  text-align: center;
+  float: left;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.mainlist_before_row .before_row_div .row_div_btn .research{
+  border:1px solid #cc3341;
+  background: #cc3341;
+  color:#fff;
+  margin-right:30px;
+}
+.mainlist_before_row .before_row_div .row_div_btn .reset{
+  color:#333;
+  border:1px solid #ededed;
+  background: #fff;
+}
+/* 结果显示区 */
+.mainlist_before_row .before_row_div .row_div_result{
+  width:803px;
+  min-height:300px;
+  margin:0 auto;
+  overflow: hidden;
+  background: #f6f6f6;
+  margin-bottom: 100px;
+}
+.before_row_div .row_div_result .nores{
+  width:100%;
+  padding-top:90px;
+  text-align: center;
+  /* display: none; */
+}
+.before_row_div .row_div_result .nores img{
+  margin:0 auto;
+}
+.before_row_div .row_div_result .nores p{
+  margin-top:15px;
+}
+/* 结果显示区 */
+.before_row_div .row_div_result .visiresult{
+  width:600px;
+  height:auto;
+  margin:0 auto;
+  margin-top:27px;
+  display: none;
+}
+.row_div_result .visiresult .header_tit{
+  height:30px;
+  line-height: 30px;
+  padding-left:10px;
+  border-radius: 5px 5px 0 0 ;
+  font-size: 16px ;
+  color:#333;
+  background:#fff2db;
+}
+.row_div_result .visiresult .header_tit a{
+  float: right;
+  padding:0 10px 0 20px;
+  font-size: 20px;
+  color:#333;
+  line-height: 30px;
+}
+.row_div_result .visiresult .body_nav{
+  padding:20px 20px 30px;
+  border-radius: 0 0 5px 5px ;
+  background: #fff;
+}
+.row_div_result .visiresult .body_nav table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width:100%;
+  font-size: 14px;
+  color:#666;
+}
+.row_div_result .visiresult .body_nav table tbody tr td{
+  border:1px solid #ededed;
+  height:37px;
+  text-indent: 20px;
+}
+.row_div_result .visiresult .body_nav table tbody tr td:first-child{
+  width:120px;
+  font-size: 14px;
+  color:#999;
+}
+.row_div_result .visiresult .body_nav .btn a{
+  display: block;
+  width:80px;
+  height:30px;
+  line-height: 30px;
+  margin:20px auto 0;
+  border:1px solid #ededed;
+  border-radius: 5px;
+  background: #cc3341;
+  color:#fff;
+  font-size: 16px;
+  text-align: center;
+}
+
+
+
+
+
+
+
