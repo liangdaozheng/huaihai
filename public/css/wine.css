@@ -1,0 +1,121 @@
+/* 酒文化详情页样式 */
+.wine_section{
+  width:100%;
+  background: #f6f6f6;
+}
+.wine_section .wine_section_nav{
+  width:1190px;
+  overflow: hidden;
+  margin:0 auto;
+}
+/* 顶部 */
+.wine_section .wine_section_nav .top_title{
+  padding:10px 0 12px;
+}
+/* 左边导航块 */
+.wine_section .wine_section_nav .left_main_list{
+  width:170px;
+  margin-right:20px;
+  float: left;
+  border:none;
+}
+  /* 上部分 */
+.wine_section_nav .left_main_list .list_impword{
+  background-color:#fff;
+  padding:20px 0;
+  margin-bottom: 20px;
+}
+.left_main_list .list_impword li{
+  height:auto;
+  box-sizing: border-box;
+  padding-left:22px;
+  border-top:none; 
+}
+.left_main_list .list_impword li span{
+  display: block;
+  width:16px ;
+  height:16px;
+  float: left;
+  margin-top:15px;
+  font-weight: 400;
+}
+.left_main_list .list_impword li:nth-child(1).active,.left_main_list .list_impword li:nth-child(2).active,.left_main_list .list_impword li:nth-child(3).active{
+  background: #fff0f1;
+  border-radius: 2px;
+}
+.left_main_list .list_impword li:nth-child(1) span{
+  background: url("../img/recomm.png");
+  background-size: 16px 16px;
+}
+.left_main_list .list_impword li:nth-child(1).active span{
+  background: url("../img/rrecomm.png");
+  background-size: 16px 16px;
+}
+.left_main_list .list_impword li:nth-child(1) a,.left_main_list .list_impword li:nth-child(2) a,.left_main_list .list_impword li:nth-child(3) a{
+  height:42px;
+  line-height: 42px;
+  width:148px;
+  color:#333;
+  font-size: 14px;
+  font-weight: 600;
+  padding:0 0 0 10px;
+}
+.left_main_list .list_impword li:nth-child(1).active a,.left_main_list .list_impword li:nth-child(2).active a,.left_main_list .list_impword li:nth-child(3).active a{
+  color:#cc3341;
+}
+.left_main_list .list_impword li:nth-child(2) span{
+  background: url("../img/attend.png");
+  background-size: 16px 16px;
+}
+.left_main_list .list_impword li:nth-child(2).active span{
+  background: url("../img/rattend.png");
+  background-size: 16px 16px;
+}
+.left_main_list .list_impword li:nth-child(3) span{
+  background: url("../img/ttopic.png");
+  background-size: 16px 16px;
+}
+.left_main_list .list_impword li:nth-child(3).active span{
+  background: url("../img/rtopic.png");
+  background-size: 16px 16px;
+}
+  /* 讨论内容 */
+.left_main_list .list_artword{
+  width:170px;
+  text-align: center;
+  background: #fff;
+  padding:20px;
+  box-sizing: border-box;
+}
+.left_main_list .list_artword li{
+  text-align: left;
+}
+.left_main_list .list_artword li a{
+  height:42px;
+  width:100%;
+  line-height: 42px;
+  color:#333 ;
+  display: inline-block;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding-left:24px;
+  border-top:1px solid #ededed;
+}
+.left_main_list .list_artword li:first-child a{
+  border-top:none;
+}
+/* 右边内容主显示区 */
+.wine_section .wine_section_nav .right_main_block{
+  width:1000px;
+  min-height: 560px;
+  padding:30px 30px 60px;
+  background: #fff;
+  float:right;
+  box-sizing: border-box;
+  position: relative;
+}
+.right_main_block .block_contain{
+  width:100%;
+  height:auto;
+  position: relative;
+}

@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!--页面名称-->
+	<title>怀海商城</title>
+	<title>订单详细</title>
+	<!-- 引入图标 -->
+	<link rel="icon" href="favicon.ico">
+	<!--引入css文件-->
+	<link rel="stylesheet" href="css/comm.css">
+	<link rel="stylesheet" href="css/order.css">
+</head>
+<body>
+  <!-- 引入头部 -->
+  <iframe src="header.html" frameborder="0" scrolling="no" class="huaihai_comm_header"></iframe>
+  <!-- 主体部分 -->
+  <section class="order_section">
+		<nav class="order_section_nav">
+			<!-- 头部提示 -->
+			<header class="top_title">
+				<!-- 指示头 -->
+				<div class="top_title_head">
+					<div class="sub_menu">
+						<a href="javascript:;">首页<strong></strong></a>
+						<a href="javascript:;">个人中心<strong></strong></a>
+						<a href="javascript:;">商城订单<strong></strong></a>
+					</div>
+				</div>
+			<!--头部下的 左边栏 -->
+				<aside class="top_title_aside">
+					<dl class="list_main">
+						<dt class="list_main_tit">交易管理</dt>
+						<dd><a href="javascript:;">商城订单</a></dd>
+						<dd><a href="javascript:;">云商订单</a></dd>
+						<dd><a href="javascript:;">退款管理</a></dd>
+						<dd><a href="javascript:;">售后管理</a></dd>
+						<dd><a href="javascript:;">收货地址</a></dd>
+						<dt class="list_main_tit">客户服务</dt>
+						<dd><a href="javascript:;">我的预约</a></dd>
+						<dd><a href="javascript:;">我的收藏</a></dd>
+						<dd><a href="javascript:;">我的积分</a></dd>
+						<dd><a href="javascript:;">我的成长值</a></dd>
+						<dd><a href="javascript:;">我的优惠券</a></dd>
+						<dd><a href="javascript:;">我的消息</a></dd>
+						<dd><a href="javascript:;">商城公告</a></dd>
+						<dd><a href="javascript:;">发票管理</a></dd>
+						<dd><a href="javascript:;">我的评论</a></dd>
+						<dd><a href="javascript:;">服务中心</a></dd>
+						<dt class="list_main_tit">账号管理</dt>
+						<dd><a href="javascript:;">个人信息</a></dd>
+						<dd><a href="javascript:;">账户安全</a></dd>
+						<dd><a href="javascript:;">账户绑定</a></dd>
+						<dd><a href="javascript:;">账户注销</a></dd>
+					</dl>
+				</aside>
+			</header>
+			<!-- 右边主体内容 -->
+			<article class="right_bottom_main">
+				<!-- 订单块 -->
+				<div class="order">
+					<!-- 订单头部 -->
+					<div class="order_top_title">
+						<ul class="forstat">
+							<li><a href="javascript:;">全部订单</a></li>
+							<li><a href="javascript:;">待付款</a></li>
+							<li><a href="javascript:;">待发货</a></li>
+							<li><a href="javascript:;">待收货</a></li>
+							<li><a href="javascript:;">已完成</a></li>
+							<li><a href="javascript:;">已取消</a></li>
+						</ul>
+						<div class="forsearch">
+							<input type="text" placeholder="订单号">
+							<a href="javascript:;">查询</a>
+						</div>
+					</div>
+					<!-- 订单导航 -->
+					<div class="order_title_nav">
+						<span class="order_data">
+							<a href="javascript:;" class="checkbtn">最近七天</a>
+							<div class="checkbox">
+								<ul>
+									<li><a href="javascript:;">最近7天</a></li>
+									<li><a href="javascript:;">最近1个月</a></li>
+									<li><a href="javascript:;">最近3个月</a></li>
+									<li><a href="javascript:;">最近半年</a></li>
+									<li><a href="javascript:;">今年</a></li>
+									<li><a href="javascript:;">所有</a></li>
+								</ul>
+							</div>
+						</span>
+						<span class="order_shop">订单详情</span>
+						<span class="order_price">收货人</span>
+						<span class="order_numer">金额</span>
+						<span class="order_numer">状态</span>
+						<span class="order_numer">操作</span>
+					</div>
+					<!-- 订单信息 -->
+					<div class="order_listmain"></div>
+					<!-- 订单按钮收款区 -->
+					<div class="order_btns">
+						<a href="javascript:;" class="btnnum">
+							<div class="number">
+								<input type="text" class="numberinput">
+								<span class="number_span1"></span>
+								<span class="number_span2">合计</span>
+							</div>
+						</a>
+						<a href="javascript:;" class="btnsums">合计付款</a>
+					</div>
+				</div>
+				<!-- 添加地址块 -->
+				<div class="address">
+					<!-- 头部提示 -->
+					<div class="address_top">
+						<a href="javascript:;">新增收货地址</a>
+						<p>
+								你已创建 <span>1</span>	个收货地址，最多可创建 <span>20</span> 个
+						</p>
+					</div>
+					<!-- 地址详情 -->
+					<div class="address_main">
+						<div class="main_card">
+							<!-- 删除键 -->
+							<div class="delete_fun"></div>
+							<!-- 修改区 -->
+							<div class="update_fun"></div>
+							<!-- 主体区 -->
+							<ul>
+								<li class="top">
+									<h3>梁xx</h3>
+									<span>默认地址</span>
+								</li>
+								<li>
+									<div>收货人:</div>
+									<span>xxx</span>
+								</li>
+								<li>
+									<div>所在地区:</div>
+									<span>xxx</span>
+								</li>
+								<li>
+									<div>地址:</div>
+									<span>xxx</span>
+								</li>
+								<li>
+									<div>手机:</div>
+									<span>xxxx</span>
+								</li>
+								<li>
+									<div>邮箱:</div>
+									<span>xxxxxxxx</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- 商品收藏 -->
+				<div class="productck">
+					<div class="productck_title">收藏的商品</div>
+					<ul class="productck_list">
+						<li class="productck_item">
+							<!-- 图片 -->
+							<a href="javascript:;" class="midpicture"></a>
+							<!-- 名字 -->
+							<div class="names">习酒 窖藏1998（红盒） 53%vol 500ml</div>
+							<!-- 价格 -->
+							<div class="price">	￥498.00</div>
+							<!-- 来自 -->
+							<div class="shop">怀海商城</div>
+							<!-- 删除 -->
+							<div class="deleta_self">
+								<a href="javascript:;">
+									<em></em>
+									删除
+								</a>
+								<a href="javascript:;">
+									<em></em>
+									加入购物车
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- 个人信息 -->
+				<div class="mainself">
+					<!-- 主体 -->
+					<div class="mainselt_title">我的基本信息</div>
+					<!-- 信息行 -->
+					<div class="mainself_row">
+						<!-- 头像 -->
+						<div class="avatar_pic">
+							<a href="javascript:;"><p>修改头像</p></a>
+						</div>
+						<!-- 会员等级 -->
+						<div class="hydj">
+							<!-- 会员简介 -->
+							<div class="hydj_title">
+								<div class="username">
+									123456789
+									<div class="sf"><em>0</em></div>
+								</div>
+								<span>距离下一等级还差<span>5</span>级</span>
+							</div>
+							<!-- 会员等级码 -->
+							<div class="hydj_status">
+								<ul>
+									<li>
+										<div class="icon"><em>1</em></div>
+									</li>
+									<li>
+										<div class="icon"><em>2</em></div>
+									</li>
+									<li>
+										<div class="icon"><em>3</em></div>
+									</li>
+									<li>
+										<div class="icon"><em>4</em></div>
+									</li>
+									<li>
+										<div class="icon"><em>5</em></div>
+									</li>
+									<li>
+										<div class="icon"><em>6</em></div>
+									</li>
+								</ul>
+							</div>
+							<!-- 会员等级名称 -->
+							<div class="hydj_names">
+								<div class="status_name">注册会员</div>
+								<div class="status_name">银卡会员</div>
+								<div class="status_name">金卡会员</div>
+								<div class="status_name">钻卡会员</div>
+								<div class="status_name">蓝钻会员</div>
+								<div class="status_name">黑卡会员</div>
+							</div>
+						</div>
+						<!-- 会员积分 -->
+						<div class="threejf">
+							<ul>
+								<li>
+									<a href="javascript:;">
+										<div class="count"><span>0</span>分</div>
+										<div class="word">我的积分</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+										<div class="count"><span>0</span>张</div>
+										<div class="word">我的优惠券</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+										<div class="count"><span>0</span>分</div>
+										<div class="word">成长值</div>		
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 具体详细信息 -->
+					<div class="mainself_nav">
+						<div class="mainself_nav_box">
+							<div class="rows">
+								<div class="col_key">
+									<strong></strong>
+									<span>会员名称</span>
+								</div>
+								<div class="col_value">
+									<span class="phone">12433333333</span>
+								</div>
+							</div>
+							<div class="rows">
+								<div class="col_key">
+									<strong></strong>
+									<span>真实姓名:</span>
+								</div>
+								<div class="col_value">
+									<span class="name">梁xx</span>
+								</div>
+							</div>
+							<div class="rows">
+								<div class="col_key">
+									<strong></strong>
+									<span>性别:</span>
+								</div>
+								<div class="col_value">
+									<span class="gender">保密</span>
+								</div>
+							</div>
+							<div class="rows">
+								<div class="col_key">
+									<strong></strong>
+									<span>生日:</span>
+								</div>
+								<div class="col_value">
+									<span class="birthday">xxxxxx</span>
+								</div>
+							</div>
+							<div class="rows">
+								<div class="col_key">
+									<strong></strong>
+									<span>居住地:</span>
+								</div>
+								<div class="col_value">
+									<span class="add">xxxxxx</span>
+								</div>
+							</div>
+							<div class="rows">
+								<div class="col_key">
+									<strong></strong>
+									<span>联系地址:</span>
+								</div>
+								<div class="col_value">
+									<span class="citys">xxxxxx</span>
+								</div>
+							</div>
+							<div class="rows">
+								<div class="col_key">
+									<strong></strong>
+									<span>邮编:</span>
+								</div>
+								<div class="col_value">
+									<span class="postcode">xxxxxx</span>
+								</div>
+							</div>
+							<div class="rows">
+								<div class="col_key">
+									<strong></strong>
+									<span>注册邮箱:</span>
+								</div>
+								<div class="col_value">
+									<span class="email">&15890595895@email.email</span>
+								</div>
+							</div>
+							<div class="rows">
+								<div class="col_key"></div>
+								<div class="col_value">
+									<input type="submit" value="修改资料" class="mailself_btnup">
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 修改信息盒子 -->
+					<div class="mainself_update">
+						<div class="mainself_update_box">
+							<div class="row">
+								<div class="col_key">
+									<strong>*</strong>
+									生日:
+								</div>
+								<div class="col_value">
+									<input type="text" class="birthday">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col_key">
+									<strong>*</strong>
+									居住地:
+								</div>
+								<div class="col_value">
+									<div class="addrss_user_select">
+										<div class="pro_city_user">
+											<select class="u_province"></select>
+											<select class="u_city"></select>
+											<select class="u_county"></select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col_key">
+									<strong>*</strong>
+									联系地址:
+								</div>
+								<div class="col_value">
+									<input type="text" class="add" placeholder="请输入联系地址">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col_key">
+									<strong>*</strong>
+									邮编:
+								</div>
+								<div class="col_value">
+									<input type="text" class="post" placeholder="请输入邮政编码">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col_key">
+									<strong>*</strong>
+									注册邮箱:
+								</div>
+								<div class="col_value">
+									<input type="text" class="email" placeholder="请输入注册邮箱">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col_key"></div>
+								<div class="col_value">
+									<input type="submit" class="mainself_save" value="保存信息">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 账户安全 -->
+				<div class="user_password">
+					<!-- 头部 -->
+					<div class="user_pwd_title">修改登录密码</div>
+					<!-- 修改进度 -->
+					<div class="user_pwd_steps">
+						<ul>
+							<li class="menu_time">
+								<p><em>1</em></p>
+								<span>修改登录密码</span>	
+							</li>
+							<li class="menu_time">
+								<p><em>2</em></p>
+								<span>完成</span>
+							</li>
+						</ul>
+					</div>
+					<!-- 密码修改详情表 -->
+					<div class="user_pwd_box">
+						<div class="pwd_content">
+							<!-- 验证手机行 -->
+							<p class="sucphone">
+								<span>已验证手机：</span>
+								<span class="phone">1212212</span>
+							</p>
+							<p class="验证手机号">
+								<span>填写手机验证码：</span>
+								<input type="text" class="pwd_phone">
+								<button class="code">获取短信验证码</button>
+							</p>
+							<p class="new_pwd">
+								<span>新的登录密码：</span>
+								<input type="password" >
+							</p>
+							<p class="new_pwd_ok">
+								<span>请再输入一次密码：</span>
+								<input type="password">
+							</p>
+							<p class="pwd_submit">
+								<span></span>
+								<button class="new_upw_btn">提交</button>
+							</p>
+						</div>
+						<!-- 成功信息 -->
+						<div class="pwd_content">
+							<p>恭喜您,密码修改成功!</p>
+						</div>
+					</div>
+				</div>
+			</article>
+		</nav>
+	</section>
+  <!-- 引入底部 -->
+  <iframe src="footer.html" frameborder="0" scrolling="no" class="huaihai_comm_footer"></iframe>
+</body>
+</html>
