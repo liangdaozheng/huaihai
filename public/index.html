@@ -65,19 +65,36 @@
 					<div class="cart_header">
 						<em class="redcart"></em>
 						<h3>购物车</h3>
-						<a href="javascript:;">关闭</a>
+						<a href="javascript:;" class="close">关闭</a>
 					</div>
 					<!-- 动图 -->
 					<div class="cart_gif"><img src="img/loading.gif" alt=""></div>
 					<!-- 订单 -->
 					<div class="cart_order_pro">
 						<div class="no_pro">
-							<p>购物车空空</p>
+							<p>购物车空空的，赶紧去挑选心仪的商品吧</p>
 							<a href="index.html">去首页看看</a>
 						</div>
 						<!-- 商品订单 -->
 						<div class="pro_order_boxs">
-							<div class="pro_order_card">
+							<!-- 结算题头 -->
+							<div class="pro_order_header clearboth ">
+								<div class="column t_check">
+									<div class="checkboxall">
+										<input type="checkbox" class="hhcheck">
+										<label style="display: none">勾选全部商品</label>
+									</div>
+									全选
+								</div>
+								<div class="column t_goods">商品</div>
+								<div class="column t_props"></div>
+								<div class="column t_proce">单价</div>
+								<div class="column t_count">数量</div>
+								<div class="column t_sum">小计</div>
+								<div class="column t_active">操作</div>
+							</div>
+							<!-- 内容 -->
+							<div class="pro_order_card" style="display: none">
 								<!-- 选择框 -->
 								<div class="radiobox">
 									<div class="radio">

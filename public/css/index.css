@@ -55,7 +55,8 @@
 }
 /* 右侧的黑色信息框 */
 .index_right_msg{
-  width:35px;
+  /* width:35px; */
+  width:320px;
   height:730px;
   position:fixed;
   top:0;
@@ -107,7 +108,7 @@
   width:68px;
   position: absolute;
   top:0px;
-  right:-188px;
+  right:-138px;
   background-color: #cc2e36;
   border-radius: 5px 0 0 5px;
   z-index:-1;
@@ -155,6 +156,159 @@
 .index_right_msg>.right_msg_bottom>a:first-child:hover div{
   transform: scale(1.3);
 }
+  /* 购物车部分 */
+  .index_right_msg .right_msg_cart{
+    position: absolute;
+    left: 35px;
+    top:0px;
+    background: #f6f6f6;
+    width: 285px;
+    /* width:50px; */
+    /* height:50px; */
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+    font-size: 12px;
+    color: #999;
+    /* border:1px solid #f00; */
+    /* z-index: 2000; */
+  }
+  /* 购物车车头部分 */
+  .index_right_msg .right_msg_cart .cart_header{
+    height: 30px;
+  }
+  .index_right_msg .right_msg_cart .cart_header .redcart{
+    display: block;
+    float: left;
+    width: 35px;
+    height:22px;
+    margin-top:6px;
+    background: url("../img/sidebar-icon.png") no-repeat;
+    background-position: center 2px;
+    font-style: normal;
+  }
+  .right_msg_cart .cart_header h3{
+    display: block;
+    float: left;
+    color: #333;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  .right_msg_cart .cart_header .close{
+    display: block;
+    float: right;
+    margin-top: 5px;
+    margin-right: 10px;
+    color: #999;
+    font-size: 14px;
+  }
+  /* 动图 */
+  .right_msg_cart .cart_gif{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -7px;
+    display: none;
+  }
+  /* 购物车定单 */
+      /* 无商品样式 */
+  .right_msg_cart .cart_order_pro .no_pro{
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    font-size: 12px;
+    color: #666;
+    line-height: 22px;
+    text-align: center;
+    display: none;
+  }
+  .right_msg_cart .cart_order_pro .no_pro a{
+    color:#cc3341;
+  }
+    /* 商品订单块 */
+    .right_msg_cart .cart_order_pro .pro_order_boxs{
+      width:100%;
+      height:auto;
+      box-sizing: border-box;
+      padding:5px;
+      /* border:1px solid #f00; */
+      margin-top:5px;
+      height:88vh;
+    }
+    /* 购物车头部框 */
+    .cart_order_pro .pro_order_boxs .pro_order_header{
+      display: block;
+      height: 32px;
+      line-height: 32px;
+      background: #f3f3f3;
+      border: 1px solid #e9e9e9;
+      border-top: 0;
+      position: relative;
+    }
+    .cart_order_pro .pro_order_boxs .pro_order_header .column{
+      float: left;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+  /* 结算按钮组 */
+  .right_msg_cart .cart_btns{
+    display: block;
+    clear: both;
+    width: 285px;
+    position: fixed;
+    bottom: 0;
+    /* right: -285px; */
+    padding: 10px 0;
+    background-color: #f6f6f6;
+  }
+  .right_msg_cart .cart_btns .cart_btns_left{
+    display: block;
+    float: left;
+    width: 150px;
+    text-align: left;
+    padding-left: 5px;
+  }
+  .right_msg_cart .cart_btns .cart_btns_left .marmm,
+  .right_msg_cart .cart_btns .cart_btns_left .pross{
+    clear: both;
+    width: 100%;
+    display: block;
+  }
+  .right_msg_cart .cart_btns .cart_btns_left .marmm span,
+  .right_msg_cart .cart_btns .cart_btns_left .pross span{
+    color:#cc3341;
+    font-weight: 700;
+  }
+  .right_msg_cart .cart_btns .salced{
+    display: block;
+    float: left;
+    width: 110px;
+    margin-left: 10px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px ;
+    font-family: "华文行楷";
+    background: #cc3341;
+    border-radius: 5px;
+  }
+  .right_msg_cart .cart_btns .salced:active{
+    background: #dfad78d9;
+    color:#cc2e36;
+  }
+
 /* 首页轮播图部分 */
 .index_top_carousel{
   width:100%;

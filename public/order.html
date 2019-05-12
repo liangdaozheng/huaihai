@@ -16,7 +16,7 @@
   <iframe src="header.html" frameborder="0" scrolling="no" class="huaihai_comm_header"></iframe>
   <!-- 主体部分 -->
   <section class="order_section">
-		<nav class="order_section_nav">
+		<nav class="order_section_nav clearboth">
 			<!-- 头部提示 -->
 			<header class="top_title">
 				<!-- 指示头 -->
@@ -27,16 +27,16 @@
 						<a href="javascript:;">商城订单<strong></strong></a>
 					</div>
 				</div>
-			<!--头部下的 左边栏 -->
+				<!--头部下的 左边栏 -->
 				<aside class="top_title_aside">
 					<dl class="list_main">
 						<dt class="list_main_tit">交易管理</dt>
-						<dd><a href="javascript:;">商城订单</a></dd>
+						<dd class="active"><a href="javascript:;">商城订单</a></dd>
 						<dd><a href="javascript:;">云商订单</a></dd>
 						<dd><a href="javascript:;">退款管理</a></dd>
 						<dd><a href="javascript:;">售后管理</a></dd>
 						<dd><a href="javascript:;">收货地址</a></dd>
-						<dt class="list_main_tit">客户服务</dt>
+						<dt class="list_main_tit kf">客户服务</dt>
 						<dd><a href="javascript:;">我的预约</a></dd>
 						<dd><a href="javascript:;">我的收藏</a></dd>
 						<dd><a href="javascript:;">我的积分</a></dd>
@@ -47,7 +47,7 @@
 						<dd><a href="javascript:;">发票管理</a></dd>
 						<dd><a href="javascript:;">我的评论</a></dd>
 						<dd><a href="javascript:;">服务中心</a></dd>
-						<dt class="list_main_tit">账号管理</dt>
+						<dt class="list_main_tit us">账号管理</dt>
 						<dd><a href="javascript:;">个人信息</a></dd>
 						<dd><a href="javascript:;">账户安全</a></dd>
 						<dd><a href="javascript:;">账户绑定</a></dd>
@@ -56,13 +56,13 @@
 				</aside>
 			</header>
 			<!-- 右边主体内容 -->
-			<article class="right_bottom_main">
+			<article class="right_bottom_main clearboth">
 				<!-- 订单块 -->
-				<div class="order">
+				<div class="order" >
 					<!-- 订单头部 -->
-					<div class="order_top_title">
+					<div class="order_top_title clearboth">
 						<ul class="forstat">
-							<li><a href="javascript:;">全部订单</a></li>
+							<li class="active"><a href="javascript:;">全部订单</a></li>
 							<li><a href="javascript:;">待付款</a></li>
 							<li><a href="javascript:;">待发货</a></li>
 							<li><a href="javascript:;">待收货</a></li>
@@ -77,8 +77,8 @@
 					<!-- 订单导航 -->
 					<div class="order_title_nav">
 						<span class="order_data">
-							<a href="javascript:;" class="checkbtn">最近七天</a>
-							<div class="checkbox">
+							<a href="javascript:;" class="checkbtn">最近7天</a>
+							<div class="checkbox" style="display: none;">
 								<ul>
 									<li><a href="javascript:;">最近7天</a></li>
 									<li><a href="javascript:;">最近1个月</a></li>
@@ -101,7 +101,7 @@
 					<div class="order_btns">
 						<a href="javascript:;" class="btnnum">
 							<div class="number">
-								<input type="text" class="numberinput">
+								<input type="text" class="numberinput" value="1">
 								<span class="number_span1"></span>
 								<span class="number_span2">合计</span>
 							</div>
@@ -110,58 +110,67 @@
 					</div>
 				</div>
 				<!-- 添加地址块 -->
-				<div class="address">
-					<!-- 头部提示 -->
-					<div class="address_top">
-						<a href="javascript:;">新增收货地址</a>
-						<p>
-								你已创建 <span>1</span>	个收货地址，最多可创建 <span>20</span> 个
-						</p>
-					</div>
+				<div class="address clearboth" style="display: none;">
+					<div class="addresslist">
+						<!-- 头部提示 -->
+						<div class="address_top ">
+							<a href="javascript:;">新增收货地址</a>
+							<p>
+									你已创建 <span>1</span>	个收货地址，最多可创建 <span>20</span> 个
+							</p>
+						</div>
 					<!-- 地址详情 -->
-					<div class="address_main">
-						<div class="main_card">
-							<!-- 删除键 -->
-							<div class="delete_fun"></div>
-							<!-- 修改区 -->
-							<div class="update_fun"></div>
-							<!-- 主体区 -->
-							<ul>
-								<li class="top">
-									<h3>梁xx</h3>
-									<span>默认地址</span>
-								</li>
-								<li>
-									<div>收货人:</div>
-									<span>xxx</span>
-								</li>
-								<li>
-									<div>所在地区:</div>
-									<span>xxx</span>
-								</li>
-								<li>
-									<div>地址:</div>
-									<span>xxx</span>
-								</li>
-								<li>
-									<div>手机:</div>
-									<span>xxxx</span>
-								</li>
-								<li>
-									<div>邮箱:</div>
-									<span>xxxxxxxx</span>
-								</li>
-							</ul>
+						<div class="address_main">
+							<div class="main_card clearboth">
+								<!-- 删除键 -->
+								<div class="delete_fun"><a href="javascript:;"></a></div>
+								<!-- 修改区 -->
+								<div class="update_fun">
+									<ul>
+										<li><a href="javascript:;">编辑</a></li>
+									</ul>
+								</div>
+								<!-- 主体区 -->
+								<ul class="c_main">
+									<li class="top">
+										<h3>梁xx</h3>
+										<span>默认地址</span>
+									</li>
+									<li>
+										<div>收货人:</div>
+										<span>xxx</span>
+									</li>
+									<li>
+										<div>所在地区:</div>
+										<span>xxx</span>
+									</li>
+									<li>
+										<div>地址:</div>
+										<span>xxx</span>
+									</li>
+									<li>
+										<div>手机:</div>
+										<span>xxxx</span>
+									</li>
+									<li>
+										<div>邮箱:</div>
+										<span>xxxxxxxx</span>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
 				<!-- 商品收藏 -->
-				<div class="productck">
+				<div class="productck" style="display: none;">
 					<div class="productck_title">收藏的商品</div>
 					<ul class="productck_list">
 						<li class="productck_item">
 							<!-- 图片 -->
-							<a href="javascript:;" class="midpicture"></a>
+							<a href="javascript:;" class="midpicture">
+								<div class="noshop"><img src="img/noshop.png" alt=""></div>
+								<div class="pic"><span></span></div>
+							</a>
 							<!-- 名字 -->
 							<div class="names">习酒 窖藏1998（红盒） 53%vol 500ml</div>
 							<!-- 价格 -->
@@ -169,12 +178,12 @@
 							<!-- 来自 -->
 							<div class="shop">怀海商城</div>
 							<!-- 删除 -->
-							<div class="deleta_self">
-								<a href="javascript:;">
+							<div class="delete_self clearboth">
+								<a href="javascript:;" class="del">
 									<em></em>
 									删除
 								</a>
-								<a href="javascript:;">
+								<a href="javascript:;" class="sel">
 									<em></em>
 									加入购物车
 								</a>
@@ -183,11 +192,11 @@
 					</ul>
 				</div>
 				<!-- 个人信息 -->
-				<div class="mainself">
+				<div class="mainself" style="display: none;">
 					<!-- 主体 -->
 					<div class="mainselt_title">我的基本信息</div>
 					<!-- 信息行 -->
-					<div class="mainself_row">
+					<div class="mainself_row clearboth">
 						<!-- 头像 -->
 						<div class="avatar_pic">
 							<a href="javascript:;"><p>修改头像</p></a>
@@ -200,7 +209,7 @@
 									123456789
 									<div class="sf"><em>0</em></div>
 								</div>
-								<span>距离下一等级还差<span>5</span>级</span>
+								<span class="marg">距离下一等级还差<span>5</span>级</span>
 							</div>
 							<!-- 会员等级码 -->
 							<div class="hydj_status">
@@ -226,7 +235,7 @@
 								</ul>
 							</div>
 							<!-- 会员等级名称 -->
-							<div class="hydj_names">
+							<div class="hydj_names clearboth">
 								<div class="status_name">注册会员</div>
 								<div class="status_name">银卡会员</div>
 								<div class="status_name">金卡会员</div>
@@ -260,7 +269,7 @@
 						</div>
 					</div>
 					<!-- 具体详细信息 -->
-					<div class="mainself_nav">
+					<div class="mainself_nav" style="display: none;">
 						<div class="mainself_nav_box">
 							<div class="rows">
 								<div class="col_key">
@@ -345,7 +354,27 @@
 					<!-- 修改信息盒子 -->
 					<div class="mainself_update">
 						<div class="mainself_update_box">
-							<div class="row">
+							<div class="rows">
+								<div class="col_key">
+									<strong>*</strong>
+									真实姓名：
+								</div>
+								<div class="col_value">
+									<input type="text" placeholder="请输入真实姓名">
+								</div>
+							</div>
+							<div class="rows">
+							 <div class="col_key">
+								<strong>*</strong>
+								性别:
+								</div>
+								<div class="col_value labelsex">
+									<label for="" class="genderlab"><em class="labchecked"></em>男</label>
+									<label for="" class="genderlab"><em class="labnoche"></em>女</label>
+									<label for="" class="genderlab"><em class="labnoche"></em>保密</label>
+								</div>	
+							</div>
+							<div class="rows">
 								<div class="col_key">
 									<strong>*</strong>
 									生日:
@@ -354,7 +383,7 @@
 									<input type="text" class="birthday">
 								</div>
 							</div>
-							<div class="row">
+							<div class="rows">
 								<div class="col_key">
 									<strong>*</strong>
 									居住地:
@@ -362,14 +391,20 @@
 								<div class="col_value">
 									<div class="addrss_user_select">
 										<div class="pro_city_user">
-											<select class="u_province"></select>
-											<select class="u_city"></select>
-											<select class="u_county"></select>
+											<select class="u_province">
+												<option value="">北京市</option>
+											</select>
+											<select class="u_city">
+												<option value="">北京市</option>
+											</select>
+											<select class="u_county">
+												<option value="">北京市</option>
+											</select>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="row">
+							<div class="rows">
 								<div class="col_key">
 									<strong>*</strong>
 									联系地址:
@@ -378,7 +413,7 @@
 									<input type="text" class="add" placeholder="请输入联系地址">
 								</div>
 							</div>
-							<div class="row">
+							<div class="rows">
 								<div class="col_key">
 									<strong>*</strong>
 									邮编:
@@ -387,7 +422,7 @@
 									<input type="text" class="post" placeholder="请输入邮政编码">
 								</div>
 							</div>
-							<div class="row">
+							<div class="rows">
 								<div class="col_key">
 									<strong>*</strong>
 									注册邮箱:
@@ -396,7 +431,7 @@
 									<input type="text" class="email" placeholder="请输入注册邮箱">
 								</div>
 							</div>
-							<div class="row">
+							<div class="rows">
 								<div class="col_key"></div>
 								<div class="col_value">
 									<input type="submit" class="mainself_save" value="保存信息">
@@ -406,13 +441,13 @@
 					</div>
 				</div>
 				<!-- 账户安全 -->
-				<div class="user_password">
+				<div class="user_password" style="display: none;">
 					<!-- 头部 -->
 					<div class="user_pwd_title">修改登录密码</div>
 					<!-- 修改进度 -->
 					<div class="user_pwd_steps">
 						<ul>
-							<li class="menu_time">
+							<li class="menu_time on">
 								<p><em>1</em></p>
 								<span>修改登录密码</span>	
 							</li>
@@ -424,20 +459,20 @@
 					</div>
 					<!-- 密码修改详情表 -->
 					<div class="user_pwd_box">
-						<div class="pwd_content">
+						<div class="pwd_content" >
 							<!-- 验证手机行 -->
 							<p class="sucphone">
 								<span>已验证手机：</span>
 								<span class="phone">1212212</span>
 							</p>
-							<p class="验证手机号">
+							<p class="phone_ok">
 								<span>填写手机验证码：</span>
 								<input type="text" class="pwd_phone">
 								<button class="code">获取短信验证码</button>
 							</p>
 							<p class="new_pwd">
 								<span>新的登录密码：</span>
-								<input type="password" >
+								<input type="password" placeholder="8-18位,至少含数字/字母/符号2种组合" >
 							</p>
 							<p class="new_pwd_ok">
 								<span>请再输入一次密码：</span>
@@ -449,7 +484,7 @@
 							</p>
 						</div>
 						<!-- 成功信息 -->
-						<div class="pwd_content">
+						<div class="pwd_content_succ" style="display: none;">
 							<p>恭喜您,密码修改成功!</p>
 						</div>
 					</div>
