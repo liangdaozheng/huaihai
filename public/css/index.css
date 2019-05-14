@@ -55,8 +55,8 @@
 }
 /* 右侧的黑色信息框 */
 .index_right_msg{
-  /* width:35px; */
-  width:350px;
+  width:35px;
+  /* width:360px; */
   height:730px;
   position:fixed;
   top:0;
@@ -163,16 +163,12 @@
     top:0px;
     background: #f6f6f6;
     width: 350px;
-    /* width:50px; */
-    /* height:50px; */
     height: 100%;
     overflow-y: auto;
     padding-bottom: 50px;
     box-sizing: border-box;
     font-size: 12px;
     color: #999;
-    /* border:1px solid #f00; */
-    /* z-index: 2000; */
   }
   /* 购物车车头部分 */
   .index_right_msg .right_msg_cart .cart_header{
@@ -256,6 +252,7 @@
       width:40px;
       text-align: center;
       margin:7px 0px 0px 0px;
+      cursor: pointer;
     }
     .pro_order_boxs .pro_order_header .t_check .checkboxall{
       position: relative;
@@ -267,6 +264,7 @@
       vertical-align: middle;
       float:none;
       margin:0px -3px 0px 0px;
+      cursor: pointer;
     }
     .pro_order_boxs .pro_order_header .t_goods{
       width:40px;
@@ -275,15 +273,163 @@
       width:50px;
     }
     .pro_order_boxs .pro_order_header .t_count{
-      width:90px;
+      width:80px;
       text-align: center;
     }
     .pro_order_boxs .pro_order_header .t_sum{
-      width:50px;
+      width:60px;
     }
     .pro_order_boxs .pro_order_header .t_active{
       width:40px;
     }
+    /* 购物车单个商品详情卡 */
+    .pro_order_boxs .pro_order_card{
+      width:100%;
+      height:auto;
+      margin-top:10px;
+      margin-bottom: 10px;
+      /* border:1px solid #f00; */
+      box-sizing: border-box;
+    }
+    .pro_order_boxs .pro_order_card .order_card_main{
+      border-style: solid;
+      border-width: 2px 1px 1px;
+      border-color: #aaa #f1f1f1 #f1f1f1;
+      background: #fff;
+      position: relative;
+      line-height: 45px;
+      padding:0 0 0 15px;
+      min-height: 45px;
+    }
+    .pro_order_boxs .pro_order_card .order_card_main .cell{
+      float: left;
+    }
+    .pro_order_card .order_card_main .radiobox{
+      position: absolute;
+      z-index: 3;
+      left: 0px;
+      top: 0;
+      width: 0px;
+      min-height: 0px;
+    }
+    .pro_order_card .order_card_main .radiobox .boxed{
+      cursor: pointer;
+    }
+    .pro_order_card .order_card_main .picname_box{
+      width:70px;
+    }
+    .pro_order_card .order_card_main .picname_box .picname .pic{
+      float: left;
+      width: 50px;
+      height: 40px;
+      border: 1px solid #eee;
+      margin-left: 8px;
+      margin-top:2px;
+      background: #fff;
+      padding: 0;
+      text-align: center;
+      overflow: hidden;
+      border:1px solid 3px;
+    }
+    .pro_order_card .order_card_main .picname_box .picname .pic img{
+      width:50px;
+      height:40px;
+    }
+    .pro_order_card .order_card_main .picname_box .picname .name{
+      width: 40px;
+      line-height: 20px;
+      overflow: hidden;
+      display: none;
+    }
+    .pro_order_card .order_card_main .pricebox{
+      width:50px;
+      margin-left:-5px;
+      overflow: hidden;
+    }
+    .pro_order_card .order_card_main .pricebox .price strong{
+      display: block;
+      color:#333;
+      font-weight: 500;
+      font-size: 5px;
+    }
+    .pro_order_card .order_card_main .countbox{
+      width:75px;
+      height:auto;
+      padding:11px 0;
+      margin-left:5px;
+    }
+    .pro_order_card .order_card_main .countbox .count{
+      position: relative;
+      overflow: hidden;
+      height: 22px;
+      width: 75px;
+      line-height: 22px;
+    }
+    .pro_order_card .order_card_main .countbox .count a{
+      border: 1px solid #cacbcb;
+      border-right: 0;
+      height: 18px;
+      line-height: 18px;
+      padding: 1px 0;
+      width: 16px;
+      text-align: center;
+      color: #666;
+      margin: 0;
+      background: #fff;
+    }
+    .pro_order_card .order_card_main .countbox .count a.smah{
+      float: left;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+    .pro_order_card .order_card_main .countbox .count a.disabled{
+      cursor: default;
+      color: #e9e9e9;
+    }
+    .pro_order_card .order_card_main .countbox .count .itext{
+      position: absolute;
+      left: 17px;
+      top: 0;
+      border: 1px solid #cacbcb;
+      width: 38px;
+      height: 18px;
+      line-height: 18px;
+      text-align: center;
+      padding: 1px;
+      margin: 0;
+      font-size: 12px;
+      color: #333;
+      outline:0;
+    }
+    .pro_order_card .order_card_main .countbox .count a.bigh{
+      float: right;
+      border: 1px solid #cacbcb;
+      border-left: 0;
+      color: #666;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+    .pro_order_card .order_card_main .salcsumbox{
+      width:65px;
+      margin-left:5px;
+      overflow: hidden;
+    }
+    .pro_order_card .order_card_main .salcsumbox strong{
+      display: block;
+      color:#333;
+      font-weight: 500;
+      font-size: 5px;
+    }
+    .pro_order_card .order_card_main .deletecartbox{
+      width:40px;
+    }
+    .pro_order_card .order_card_main .deletecartbox a{
+      color:#666;
+    }
+    .pro_order_card .order_card_main .deletecartbox a:hover{
+      color:#cc2e36;
+    }
+
 
 
 
