@@ -14,6 +14,8 @@
   position: fixed;
   top:0px;
   left:0px;
+  z-index: 1000;
+  /* display: block; */
   display: none;
 }
 .index_search>div:first-child{
@@ -613,7 +615,7 @@
   width:100%;
   height:500px;
   position: relative;
-  background-size:cover;
+  /* background-size:cover; */
 }
 .index_top_carousel .carousel_back_sec .pic_box ul>li{
   display: block;
@@ -621,8 +623,9 @@
   height:500px;
   float: left;
   position: relative;
+  z-index: -10;
 }
-.index_top_carousel .carousel_back_sec .pic_box ul>li:first-child>a{
+/* .index_top_carousel .carousel_back_sec .pic_box ul>li:first-child>a{
   background:url("../img/index/WNpsFk6sjh.jpg") center no-repeat;
 }
 .index_top_carousel .carousel_back_sec .pic_box ul>li:nth-child(2)>a{
@@ -630,7 +633,7 @@
 }
 .index_top_carousel .carousel_back_sec .pic_box ul>li:last-child>a{
   background:url("../img/index/MAie2DBDhd.jpg") center no-repeat;
-}
+} */
   /* 指示符 */
 .index_top_carousel .carousel_back_sec .pic_show{
   position: absolute;
