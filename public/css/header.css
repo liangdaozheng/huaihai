@@ -12,6 +12,7 @@
   align-items: center;
   width:1190px;
   margin-left:220px;
+  margin:0 auto;
 }
 /* 添加|线的距离 */
 .header_header_nav>li>a{
@@ -78,10 +79,13 @@
   border:1px dashed #999999;
 }
 /* footer 部分的样式 */
-.header_foot_sec{
+.header_foot_div{
   width:100%;
+}
+.header_foot_sec{
+  width:1190px;
   height:141px;
-  margin:0 190px;
+  margin:0 auto;
 }
 .footer_logo,.footer_github,.footer_section{
   float: left;
