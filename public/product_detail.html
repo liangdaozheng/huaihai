@@ -12,7 +12,7 @@
 </head>
 <body>
 	<!--引入头部-->
-	<iframe src="header.html" frameborder="0" scrolling="no" class="huaihai_comm_header"></iframe>
+	<header id="header"></header>
 	<!-- 单个详情内容 -->
 	<section class="product_detail_section">
 		<!-- 头部红框块 -->
@@ -236,7 +236,7 @@
 				<!-- 左右两边块 -->
 				<div class="left">
 					<a href="#">习酒馆</a>
-					<span>>></span>
+					<span>&gt;&gt;</span>
 					<a href="#">窖藏系列</a>
 				</div>
 				<div class="right">
@@ -244,7 +244,7 @@
 					<a class="shopping_pic" href="#">
 						<img src="img/huaihai.png" alt="">   怀海商城
 					</a>
-					<span>>></span>
+					<span>&gt;&gt;</span>
 					<a class="kf" href="#">
 						联系客服
 					</a>
@@ -260,7 +260,7 @@
 					<div class="left_pictures">
 						<!-- 大图 -->
 						<div class="big_picture">
-							<img src="product/xi/xi_cang/Q6bMJZHiTS (1).jpg" alt="">
+							<img src="product/xi/xi_cang/Q6bMJZHiTS1.jpg" alt="">
 							<!-- 放大镜 -->
 							<div></div>
 						</div>
@@ -278,7 +278,7 @@
 						</div>
 						<!-- 放大图 -->
 						<div class="super_picture" >
-							<img src="product/xi/xi_cang/Q6bMJZHiTS (2).jpg" alt="">
+							<img src="product/xi/xi_cang/Q6bMJZHiTS2.jpg" alt="">
 						</div>
 					</div>
 					<!-- 收藏 分享 -->
@@ -480,21 +480,10 @@
 													</tbody>
 												</table>
 												<!-- 更多参数行 -->
-												<div class="show_more_row"><a href="#" onclick="getPics()">更多参数>></a></div>
+												<div class="show_more_row"><a href="#" >更多参数&gt;&gt;</a></div>
 												<!-- 图片 -->
 												<div class="pics_column">
-													<img id="img1" src="" alt="">
-													<img id="img2" src="" alt="">
-													<img id="img3" src="" alt="">
-													<img id="img4" src="" alt="">
-													<img id="img5" src="" alt="">
-													<img id="img6" src="" alt="">
-													<img id="img7" src="" alt="">
-													<img id="img8" src="" alt="">
-													<img id="img9" src="" alt="">
-													<img id="img10" src="" alt="">
-													<img id="img11" src="" alt="">
-													<img id="img12" src="" alt="">
+													
 												</div>
 											</div>
 										</div>
@@ -582,7 +571,9 @@
 		</footer>
 	</section>
 	<!--引入底部-->
-	<iframe src="footer.html" frameborder="0" scrolling="no" class="huaihai_comm_footer"></iframe>
-	<script type="text/javascript" src="javascript/ceshi_router.js"></script>
+	<footer id="footer" ></footer>
+	<script src="javascript/jquery-1.11.3.js"></script>
+	<script src="javascript/header.js"></script>
+	<script src="javascript/footer.js"></script>
 </body>
 </html>

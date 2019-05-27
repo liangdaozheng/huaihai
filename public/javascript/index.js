@@ -147,9 +147,9 @@
                //商品区域
                console.log(products);
                //特惠区 可以用循环 只可惜数据太乱了
-               var productone=products.slice(0,10);
+               var product=products.slice(0,10);
                var html="";
-               for(var p of productone){
+               for(var p of product){
                 html+=`
                     <li>
                          <a href="${p.href}">
@@ -165,9 +165,201 @@
                };
                $("#list_tehui_data").html(html);
                //贵州茅台酒区域
-
-
-
+               $("#maotai_main_left").html(`<a href="${products[43].href}"><img src="${products[43].pic}" alt=""></a>`)
+               var html="";
+               var product=products.slice(4,11);
+               //console.log(product);
+               for(var p of product){
+                    html+=`
+                        <li>
+                             <a href="${p.href}">
+                                  <div class="img">
+                                       <img src="${p.pic}" alt="">
+                                  </div>
+                                  <div class="text">
+                                       <p>${p.title}</p>
+                                       <span>${p.price.toFixed(2)}</span>
+                                  </div>
+                             </a>
+                        </li>`
+                   };
+               $("#maotai_right_data").html(html);
+               //一楼商品
+               var product=products.slice(11,15);
+               //console.log(product);
+               var html="";
+               html+=`<div class="big_pic" >
+                         <a href="${products[44].href}">
+                              <div class="img">
+                                   <img src="${products[44].pic}" alt="">
+                              </div>			
+                         </a>			
+                    </div>`;
+               for (var p of product){
+                    html+=`<div class="small_pic">
+                              <a href="${p.href}">
+                                   <div class="img">
+                                        <img src="${p.pic}" alt="">
+                                   </div>
+                                   <div class="text">
+                                        <p>${p.title}</p>
+                                        <span>${p.price.toFixed(2)}</span>
+                                   </div>
+                              </a>
+                         </div>`;
+               };
+               $("#floor_one_data").html(html);
+               //二楼商品
+               var product=products.slice(15,19);
+               //console.log(product);
+               var html="";
+               html+=`<div class="big_pic" >
+                         <a href="${products[45].href}">
+                              <div class="img">
+                                   <img src="${products[45].pic}" alt="">
+                              </div>			
+                         </a>			
+                    </div>`;
+               for (var p of product){
+                    html+=`<div class="small_pic">
+                              <a href="${p.href}">
+                                   <div class="img">
+                                        <img src="${p.pic}" alt="">
+                                   </div>
+                                   <div class="text">
+                                        <p>${p.title}</p>
+                                        <span>${p.price.toFixed(2)}</span>
+                                   </div>
+                              </a>
+                         </div>`;
+               };
+               $("#floor_two_data").html(html);
+               //三楼商品
+               var product=products.slice(19,23);
+               //console.log(product);
+               var html="";
+               html+=`<div class="big_pic" >
+                         <a href="${products[46].href}">
+                              <div class="img">
+                                   <img src="${products[46].pic}" alt="">
+                              </div>			
+                         </a>			
+                    </div>`;
+               for (var p of product){
+                    html+=`<div class="small_pic">
+                              <a href="${p.href}">
+                                   <div class="img">
+                                        <img src="${p.pic}" alt="">
+                                   </div>
+                                   <div class="text">
+                                        <p>${p.title}</p>
+                                        <span>${p.price.toFixed(2)}</span>
+                                   </div>
+                              </a>
+                         </div>`;
+               };
+               $("#floor_three_data").html(html);
+               //四楼
+               var product=products.slice(23,27);
+               //console.log(product);
+               var html="";
+               html+=`<div class="big_pic" >
+                         <a href="${products[47].href}">
+                              <div class="img">
+                                   <img src="${products[47].pic}" alt="">
+                              </div>			
+                         </a>			
+                    </div>`;
+               for (var p of product){
+                    html+=`<div class="small_pic">
+                              <a href="${p.href}">
+                                   <div class="img">
+                                        <img src="${p.pic}" alt="">
+                                   </div>
+                                   <div class="text">
+                                        <p>${p.title}</p>
+                                        <span>${p.price.toFixed(2)}</span>
+                                   </div>
+                              </a>
+                         </div>`;
+               };
+               $("#floor_four_data").html(html);
+               //五楼
+               var product=products.slice(27,31);
+               //console.log(product);
+               var html="";
+               html+=`<div class="big_pic" >
+                         <a href="${products[48].href}">
+                              <div class="img">
+                                   <img src="${products[48].pic}" alt="">
+                              </div>			
+                         </a>			
+                    </div>`;
+               for (var p of product){
+                    html+=`<div class="small_pic">
+                              <a href="${p.href}">
+                                   <div class="img">
+                                        <img src="${p.pic}" alt="">
+                                   </div>
+                                   <div class="text">
+                                        <p>${p.title}</p>
+                                        <span>${p.price.toFixed(2)}</span>
+                                   </div>
+                              </a>
+                         </div>`;
+               };
+               $("#floor_five_data").html(html);
+               //六楼
+               var product=products.slice(31,35);
+               //console.log(product);
+               var html="";
+               html+=`<div class="big_pic" >
+                         <a href="${products[49].href}">
+                              <div class="img">
+                                   <img src="${products[49].pic}" alt="">
+                              </div>			
+                         </a>			
+                    </div>`;
+               for (var p of product){
+                    html+=`<div class="small_pic">
+                              <a href="${p.href}">
+                                   <div class="img">
+                                        <img src="${p.pic}" alt="">
+                                   </div>
+                                   <div class="text">
+                                        <p>${p.title}</p>
+                                        <span>${p.price.toFixed(2)}</span>
+                                   </div>
+                              </a>
+                         </div>`;
+               };
+               $("#floor_six_data").html(html);
+               //七楼
+               var product=products.slice(35,39);
+               //console.log(product);
+               var html="";
+               html+=`<div class="big_pic" >
+                         <a href="${products[50].href}">
+                              <div class="img">
+                                   <img src="${products[50].pic}" alt="">
+                              </div>			
+                         </a>			
+                    </div>`;
+               for (var p of product){
+                    html+=`<div class="small_pic">
+                              <a href="${p.href}">
+                                   <div class="img">
+                                        <img src="${p.pic}" alt="">
+                                   </div>
+                                   <div class="text">
+                                        <p>${p.title}</p>
+                                        <span>${p.price.toFixed(2)}</span>
+                                   </div>
+                              </a>
+                         </div>`;
+               };
+               $("#floor_seven_data").html(html);
+               
                 }
            })
       })
