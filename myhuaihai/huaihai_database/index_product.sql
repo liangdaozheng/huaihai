@@ -1,4 +1,4 @@
-img/img/img/#首页商品的详情
+#首页商品的详情
 #一楼 4
 INSERT INTO hh_index_product VALUES (1,'赖茅酒（传承）53%vol 500ml','img/index/ep2NPeZFKS.jpg',888.00,'product_detail.html?wid=25');
 INSERT INTO hh_index_product VALUES (2,'汉酱酒 51%vol 500ml','img/index/Q2MXQPpBwT.jpg',998.00,'product_detail.html?wid=3');

@@ -64,7 +64,7 @@ USE huaihai;
 		title VARCHAR(64),
 		pic VARCHAR(128),		#图片
 		price DECIMAL(10,2),	#价格
-		href VARCHAR(128),		
+		href VARCHAR(128)		
 	);
 #创建首页轮播图表(hh_index_carousel)
 	CREATE TABLE hh_index_carousel(
