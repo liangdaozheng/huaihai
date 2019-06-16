@@ -7,7 +7,13 @@ const cors=require('cors');
 //引入用户路由器
 const userRouter=require('./routes/user.js');
 //引入首页商品路由器
-const index=require('./routes/index.js')
+const index=require('./routes/index.js');
+//引入商品详情页数据
+const detail=require('./routes/detail');
+
+
+
+
 //创建怀海服务器
 var server=express();
 //贴标签 伪装跨域
@@ -30,6 +36,7 @@ server.use(bodyParser.urlencoded({extended:false}));
 server.use('/user',userRouter);
 //挂载首页路由
 server.use('/index',index);
-
+//挂载商品详情路由
+server.use('/detail',detail);
 
 
