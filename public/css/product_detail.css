@@ -228,6 +228,9 @@
     float: left;
     margin-bottom:60px;
   }
+  .footer_navsec .footer_navsec_left .left_pictures{
+    position: relative;
+  }
   /* 大图框 */
   .footer_navsec .footer_navsec_left .left_pictures .big_picture{
     width:416px;
@@ -242,7 +245,7 @@
     height:420px;
   }
       /* 放大镜 */
-  .footer_navsec .footer_navsec_left .left_pictures .big_picture div{
+  .footer_navsec .footer_navsec_left .left_pictures .big_picture div.dd{
     width:235px;
     height:210px;
     border:1px solid #fff;
@@ -254,9 +257,21 @@
     top:0px;
     display:none;
   }
-  .footer_navsec .footer_navsec_left .left_pictures .big_picture:hover div{
-    display: block;
+  .footer_navsec .footer_navsec_left .left_pictures .big_picture .targetdiv{
+    width:416px;
+    height:416px;
+    cursor: crosshair;
+    position: absolute;
+    top:0px;
+    left:0px;
+    z-index: 5;
   }
+  .display_block{
+    display: block !important;
+  }
+  /* .footer_navsec .footer_navsec_left .left_pictures .big_picture:hover div{
+    display: block;
+  } */
   /* 小图片盒 */
   .footer_navsec .footer_navsec_left .left_pictures .small_picture{
     width:420px;
@@ -273,6 +288,7 @@
     overflow: hidden;
     margin-left:0;
   }
+  
   .left_pictures .small_picture .small_picture_box ul{
     height:70px;
   }
@@ -301,27 +317,27 @@
   }
   /* 放大图 */
   .footer_navsec .footer_navsec_left .left_pictures .super_picture{
-    width:476px;
+    width:470px;
     height:420px;
     border:1px solid #959595;
     background-color: #fff;
     overflow: hidden;
     position: absolute;
-    top:225px;
-    left:620px;
-    z-index: 999;
+    top:0px;
+    left:420px;
+    z-index: 10;
     display: none;
   }
-  .footer_navsec .footer_navsec_left .left_pictures .big_picture:hover~.super_picture{
+  /* .footer_navsec .footer_navsec_left .left_pictures .big_picture:hover~.super_picture{
     display: block;
-  }
+  } */
   .footer_navsec .footer_navsec_left .left_pictures .super_picture img{
     position: absolute;
     top:0px;
     left:0px;
-    max-width: 840px;
+    /* max-width: 840px;
     width:450px;
-    height:420px;
+    height:420px; */
   }
     /* 收藏 分享 */
   .footer_navsec .footer_navsec_left .left_cangfen{

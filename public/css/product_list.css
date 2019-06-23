@@ -302,7 +302,7 @@
   display: inline-block;
   width:51px;
   line-height: 24px;
-  padding-left:10px;
+  padding-left:5px;
   box-sizing: border-box;
   border:1px solid #dcdcdc;
   color:#333;
@@ -431,7 +431,7 @@
   width:200px;
   height:200px;
   margin:0 auto 10px;
-  background: url("../product/xi/xi_cang/Q6bMJZHiTS1.jpg") no-repeat;
+  /* background: url("../product/xi/xi_cang/Q6bMJZHiTS1.jpg") no-repeat; */
   background-position: center top;
   background-size: cover;
   overflow: hidden;
@@ -455,8 +455,12 @@
   float: left;
   padding-top:0;
   margin:0 4px;
+  border:1px solid #ddd;
+}
+.list_sons .list_son .pics .small_pic .small_pic_list li.active{
   border:1px solid #cc3341;
 }
+
 .list_sons .list_son .pics .small_pic .small_pic_list li img{
   width:25px;
   height:25px;
@@ -545,7 +549,7 @@
   }
   .list_sons .list_son .butt .btn{
     display: inline-block;
-    width:96px;
+    width:103px;
     height:26px;
     border:1px solid #ebebeb;
     line-height: 26px;
@@ -616,12 +620,12 @@
     margin-left:20px;
     width:60px;
   }
-  .foot_page .foot_page_main .page_main_list li:active,
+  
   .foot_page .foot_page_main .page_main_list .ac_color{
     background: #cc3341;
     border:1px solid #cc3341;
   }
-  .foot_page .foot_page_main .page_main_list li:active a,
+  
   .foot_page .foot_page_main .page_main_list .ac_color a{
     color:#fff;
   }

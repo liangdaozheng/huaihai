@@ -229,9 +229,9 @@
 			<aside class="list_aside_row">
 				<div class="list_aside_sons">
 					<!-- 第一行 -->
-					<table class="main_title">
-						<tbody>
-							<tr>
+					<table class="main_title" >
+						<tbody id="winefname">
+							<!-- <tr>
 								<td class="left">全部结果&gt;&gt;</td>
 								<td class="center">
 									<div>品牌：习酒</div>
@@ -241,15 +241,15 @@
 										<li><a href="#">习酒</a></li>
 									</ul>
 								</td>
-							</tr>
+							</tr> -->
 						</tbody>
 					</table>
 					<!-- 第二行 -->
 					<div class="rows">
 						<div class="row_title">价格：</div>
 						<ul class="row_center">
-							<li><a href="#">0-1998</a></li>
-							<li><a href="#">1999-2999</a></li>
+							<li><a href="javascript:;">0-1998</a></li>
+							<li><a href="javascript:;">1999-2999</a></li>
 						</ul>
 						<div class="row_right">
 							<div>
@@ -259,23 +259,23 @@
 							<div>
 								<input type="text">
 							</div>
-							<a href="#">确定</a>
+							<a href="javascript:;">确定</a>
 						</div>
 					</div>
 					<!-- 第三行 -->
 					<div class="rows">
 							<div class="row_title">香型：</div>
 							<ul class="row_center">
-								<li><a href="#">酱香</a></li>
-								<li><a href="#">浓香</a></li>
+								<li><a href="javascript:;">酱香</a></li>
+								<li><a href="javascript:;">浓香</a></li>
 							</ul>
 					</div>
 					<!-- 第四行 -->
 					<div class="rows">
 							<div class="row_title">酒精度:</div>
 							<ul class="row_center">
-								<li><a href="#">53%vol</a></li>
-								<li><a href="#">52%vol</a></li>
+								<li><a href="javascript:;">53%vol</a></li>
+								<li><a href="javascript:;">52%vol</a></li>
 							</ul>
 					</div>
 				</div>
@@ -288,18 +288,18 @@
 				<div class="navsec_top">
 					<div class="navsec_top_left">
 						<ul>
-							<li><a href="#">综合</a></li>
-							<li><a href="#">销量</a></li>
-							<li><a href="#">新品</a></li>
-							<li><a href="#">价格</a></li>
+							<li><a href="javascript:;">综合</a></li>
+							<li><a href="javascript:;">销量</a></li>
+							<li><a href="javascript:;">新品</a></li>
+							<li><a href="javascript:;">价格</a></li>
 						</ul>
 					</div>
 					<div class="navsec_top_right">
 						<div class="fu">
-							<a href="#"><span>&lt;</span></a><a href="#"><span>&gt;</span></a>
+							<a href="javascript:;"><span>&lt;</span></a><a href="javascript:;"><span>&gt;</span></a>
 						</div>
-						<div class="word">
-								供<span>34</span>件商品<span>1</span> / <a href="#">2</a>
+						<div class="word" id="productcount">
+								<!-- 供<span>34</span>件商品<span>1</span> / <a href="#">2</a> -->
 							</div>
 					</div>
 				</div>
@@ -307,7 +307,7 @@
 				<div class="navsec_suptop">
 					<ul>
 						<li>
-							<a href="#">
+							<a href="javascript:;">
 								<span class="imgs"></span>
 								<input type="text" value="1" style="display:none">
 								<span>仅显示有货</span>
@@ -316,49 +316,48 @@
 					</ul>
 					<div>
 						<input type="text" placeholder="请搜索···">
-						<a href="#">确定</a>
+						<a href="javascript:;">确定</a>
 					</div>
 				</div>
 				<!-- 商品主体 -->
 				<div class="navsec_main">
-					<ul class="prolist_main">
-						<li class="list_sons">
+					<ul class="prolist_main" id="wineinfo">
+						<!-- <li class="list_sons">
 							<div class="list_son">
-								<!-- 照片部分 -->
+								 照片部分 
 								<div class="pics">
-									<a href="#">
-										<div><span class="big_pic_box"></span></div>
+									<a href="javascript:;">
+										<div><img class="big_pic_box" src="../product/xi/xi_cang/Q6bMJZHiTS1.jpg"></img></div>
 									</a>
 									<div class="small_pic">
 										<ul class="small_pic_list">
-											<li><img src="product/xi/xi_zun/WNf54JkFKj.jpg" alt=""></li>
+											<li><img src="product/xi/xi_zun/WNf54JkFKj.jpg" alt></li>
 										</ul>
 									</div>
 									<div class="jian_head">
-										<a class="left" href="#"><img src="img/qleft.png" alt=""></a>
-										<a class="right" href="#"><img src="img/qright.png" alt=""></a>
+										<a class="left" href="javascript:;"><img src="img/qleft.png" alt></a>
+										<a class="right" href="javascript:;"><img src="img/qright.png" alt></a>
 									</div>
 								</div>
-								<!-- 大价格部分 -->
-								<a href="#">
+								大价格部分
+								<a href="javascript:;">
 									<span class="price">￥1999.00</span>
 									<div class="name">
 										<em>习酒</em> 印象遵义（红色）52%vol 500ml
 									</div>
 								</a>
-								<!--商城标识  -->
-								<a href="#">
+								商城标识 
+								<a href="javascript:;">
 									<div class="shop_home">
 										<span>怀海商城</span>
-										<img src="img/proList.png" alt="">
-									</div>
-									
+										<img src="img/proList.png" alt>
+									</div>	
 								</a>
-								<!-- 月销量 -->
+								月销量
 								<div class="count">
 									<span>月销量54件</span>
 								</div>
-								<!-- 收藏 购物车 -->
+								收藏 购物车
 								<div class="butt">
 									<a href="#" class="btn">
 										<div>
@@ -374,350 +373,28 @@
 									</a>
 								</div>
 							</div>
-						</li>
+						</li> -->
 						<!-- 第二个 -->
-						<li class="list_sons">
-								<div class="list_son">
-									<!-- 照片部分 -->
-									<div class="pics">
-										<a href="product_detail.html">
-											<div><span class="big_pic_box"></span></div>
-										</a>
-										<div class="small_pic">
-											<ul class="small_pic_list">
-												<li><img src="product/xi/xi_cang/Q6bMJZHiTS.jpg" alt=""></li>
-											</ul>
-										</div>
-										<div class="jian_head">
-											<a class="left" href="#"><img src="img/qleft.png" alt=""></a>
-											<a class="right" href="#"><img src="img/qright.png" alt=""></a>
-										</div>
-									</div>
-									<!-- 大价格部分 -->
-									<a href="#">
-										<span class="price">￥1999.00</span>
-										<div class="name">
-											<em>习酒</em> 印象遵义（红色）52%vol 500ml
-										</div>
-									</a>
-									<!--商城标识  -->
-									<a href="#">
-										<div class="shop_home">
-											<span>怀海商城</span>
-											<img src="img/proList.png" alt="">
-										</div>
-										
-									</a>
-									<!-- 月销量 -->
-									<div class="count">
-										<span>月销量54件</span>
-									</div>
-									<!-- 收藏 购物车 -->
-									<div class="butt">
-										<a href="#" class="btn">
-											<div>
-												<i class="cang"></i>
-												<span>收藏</span>
-											</div>
-										</a>
-										<a href="#" class="btn">
-											<div class="cart">
-												<i class="jia"></i>
-												<span>加入购物车</span>
-											</div>
-										</a>
-									</div>
-								</div>
-						</li>
-						<!-- 第三个 -->
-						<li class="list_sons">
-								<div class="list_son">
-									<!-- 照片部分 -->
-									<div class="pics">
-										<a href="#">
-											<div><span class="big_pic_box"></span></div>
-										</a>
-										<div class="small_pic">
-											<ul class="small_pic_list">
-												<li><img src="product/xi/xi_zun/WNf54JkFKj.jpg" alt=""></li>
-											</ul>
-										</div>
-										<div class="jian_head">
-											<a class="left" href="#"><img src="img/qleft.png" alt=""></a>
-											<a class="right" href="#"><img src="img/qright.png" alt=""></a>
-										</div>
-									</div>
-									<!-- 大价格部分 -->
-									<a href="#">
-										<span class="price">￥1999.00</span>
-										<div class="name">
-											<em>习酒</em> 印象遵义（红色）52%vol 500ml
-										</div>
-									</a>
-									<!--商城标识  -->
-									<a href="#">
-										<div class="shop_home">
-											<span>怀海商城</span>
-											<img src="img/proList.png" alt="">
-										</div>
-										
-									</a>
-									<!-- 月销量 -->
-									<div class="count">
-										<span>月销量54件</span>
-									</div>
-									<!-- 收藏 购物车 -->
-									<div class="butt">
-										<a href="#" class="btn">
-											<div>
-												<i class="cang"></i>
-												<span>收藏</span>
-											</div>
-										</a>
-										<a href="#" class="btn">
-											<div class="cart">
-												<i class="jia"></i>
-												<span>加入购物车</span>
-											</div>
-										</a>
-									</div>
-								</div>
-						</li>
-						<!-- 第四个 -->
-						<li class="list_sons">
-								<div class="list_son">
-									<!-- 照片部分 -->
-									<div class="pics">
-										<a href="#">
-											<div><span class="big_pic_box"></span></div>
-										</a>
-										<div class="small_pic">
-											<ul class="small_pic_list">
-												<li><img src="product/xi/xi_zun/WNf54JkFKj.jpg" alt=""></li>
-											</ul>
-										</div>
-										<div class="jian_head">
-											<a class="left" href="#"><img src="img/qleft.png" alt=""></a>
-											<a class="right" href="#"><img src="img/qright.png" alt=""></a>
-										</div>
-									</div>
-									<!-- 大价格部分 -->
-									<a href="#">
-										<span class="price">￥1999.00</span>
-										<div class="name">
-											<em>习酒</em> 印象遵义（红色）52%vol 500ml
-										</div>
-									</a>
-									<!--商城标识  -->
-									<a href="#">
-										<div class="shop_home">
-											<span>怀海商城</span>
-											<img src="img/proList.png" alt="">
-										</div>
-										
-									</a>
-									<!-- 月销量 -->
-									<div class="count">
-										<span>月销量54件</span>
-									</div>
-									<!-- 收藏 购物车 -->
-									<div class="butt">
-										<a href="#" class="btn">
-											<div>
-												<i class="cang"></i>
-												<span>收藏</span>
-											</div>
-										</a>
-										<a href="#" class="btn">
-											<div class="cart">
-												<i class="jia"></i>
-												<span>加入购物车</span>
-											</div>
-										</a>
-									</div>
-								</div>
-						</li>
-						<!-- 第五个 -->
-						<li class="list_sons">
-							<div class="list_son">
-								<!-- 照片部分 -->
-								<div class="pics">
-									<a href="#">
-										<div><span class="big_pic_box"></span></div>
-									</a>
-									<div class="small_pic">
-										<ul class="small_pic_list">
-											<li><img src="product/xi/xi_zun/WNf54JkFKj.jpg" alt=""></li>
-										</ul>
-									</div>
-									<div class="jian_head">
-										<a class="left" href="#"><img src="img/qleft.png" alt=""></a>
-										<a class="right" href="#"><img src="img/qright.png" alt=""></a>
-									</div>
-								</div>
-								<!-- 大价格部分 -->
-								<a href="#">
-									<span class="price">￥1999.00</span>
-									<div class="name">
-										<em>习酒</em> 印象遵义（红色）52%vol 500ml
-									</div>
-								</a>
-								<!--商城标识  -->
-								<a href="#">
-									<div class="shop_home">
-										<span>怀海商城</span>
-										<img src="img/proList.png" alt="">
-									</div>
-									
-								</a>
-								<!-- 月销量 -->
-								<div class="count">
-									<span>月销量54件</span>
-								</div>
-								<!-- 收藏 购物车 -->
-								<div class="butt">
-									<a href="#" class="btn">
-										<div>
-											<i class="cang"></i>
-											<span>收藏</span>
-										</div>
-									</a>
-									<a href="#" class="btn">
-										<div class="cart">
-											<i class="jia"></i>
-											<span>加入购物车</span>
-										</div>
-									</a>
-								</div>
-							</div>
-						</li>
-						<!-- 第六个 -->
-						<li class="list_sons">
-								<div class="list_son">
-									<!-- 照片部分 -->
-									<div class="pics">
-										<a href="#">
-											<div><span class="big_pic_box"></span></div>
-										</a>
-										<div class="small_pic">
-											<ul class="small_pic_list">
-												<li><img src="product/xi/xi_zun/WNf54JkFKj.jpg" alt=""></li>
-											</ul>
-										</div>
-										<div class="jian_head">
-											<a class="left" href="#"><img src="img/qleft.png" alt=""></a>
-											<a class="right" href="#"><img src="img/qright.png" alt=""></a>
-										</div>
-									</div>
-									<!-- 大价格部分 -->
-									<a href="#">
-										<span class="price">￥1999.00</span>
-										<div class="name">
-											<em>习酒</em> 印象遵义（红色）52%vol 500ml
-										</div>
-									</a>
-									<!--商城标识  -->
-									<a href="#">
-										<div class="shop_home">
-											<span>怀海商城</span>
-											<img src="img/proList.png" alt="">
-										</div>
-										
-									</a>
-									<!-- 月销量 -->
-									<div class="count">
-										<span>月销量54件</span>
-									</div>
-									<!-- 收藏 购物车 -->
-									<div class="butt">
-										<a href="#" class="btn">
-											<div>
-												<i class="cang"></i>
-												<span>收藏</span>
-											</div>
-										</a>
-										<a href="#" class="btn">
-											<div class="cart">
-												<i class="jia"></i>
-												<span>加入购物车</span>
-											</div>
-										</a>
-									</div>
-								</div>
-						</li>
-						<!-- 第七个 -->
-						<li class="list_sons">
-								<div class="list_son">
-									<!-- 照片部分 -->
-									<div class="pics">
-										<a href="#">
-											<div><span class="big_pic_box"></span></div>
-										</a>
-										<div class="small_pic">
-											<ul class="small_pic_list">
-												<li><img src="product/xi/xi_zun/WNf54JkFKj.jpg" alt=""></li>
-											</ul>
-										</div>
-										<div class="jian_head">
-											<a class="left" href="#"><img src="img/qleft.png" alt=""></a>
-											<a class="right" href="#"><img src="img/qright.png" alt=""></a>
-										</div>
-									</div>
-									<!-- 大价格部分 -->
-									<a href="#">
-										<span class="price">￥1999.00</span>
-										<div class="name">
-											<em>习酒</em> 印象遵义（红色）52%vol 500ml
-										</div>
-									</a>
-									<!--商城标识  -->
-									<a href="#">
-										<div class="shop_home">
-											<span>怀海商城</span>
-											<img src="img/proList.png" alt="">
-										</div>
-										
-									</a>
-									<!-- 月销量 -->
-									<div class="count">
-										<span>月销量54件</span>
-									</div>
-									<!-- 收藏 购物车 -->
-									<div class="butt">
-										<a href="#" class="btn">
-											<div>
-												<i class="cang"></i>
-												<span>收藏</span>
-											</div>
-										</a>
-										<a href="#" class="btn">
-											<div class="cart">
-												<i class="jia"></i>
-												<span>加入购物车</span>
-											</div>
-										</a>
-									</div>
-								</div>
-						</li>
+					
 					</ul>
 				</div>
 				<!-- 翻页块 -->
-				<div class="nacsec_foot">
+				<div class="nacsec_foot" id="footpagenav">
 					<div class="foot_page">
 						<div class="foot_page_main">
 							<!-- 指示行 -->
-							<ul class="page_main_list">
-								<li class="page_start"><a href="#">上一页</a></li>
-								<li class="ac_color"><a href="#">1</a></li>
-								<li><a href="#">2</a></li>
-								<li class="page_end"><a href="#">下一页</a></li>
+							<ul class="page_main_list" id="pagenavlist">
+								<li class="page_start" id="prevpage" ><a href="javascript:;" >上一页</a></li>
+								<!-- <li class="ac_color"><a href="javascript:;">1</a></li>
+								<li><a href="javascript:;">2</a></li> -->
+								<li class="page_end" id="nextpage"><a href="javascript:;">下一页</a></li>
 							</ul>
 							<!-- 跳转行 -->
 							<div class="page_bott">
 								<span>跳至</span>
-								<input type="text">
+								<input type="text" id="jumppage">
 								<span>页</span>
-								<a href="#">跳转</a>
+								<a href="javascript:;" id="jumpbtn">跳转</a>
 							</div>
 						</div>
 					</div>
@@ -728,7 +405,9 @@
 <!--引入底部-->
 <footer id="footer" ></footer>
 <script src="javascript/jquery-3.2.1.js"></script>
+<script src="javascript/myajax.js"></script>
 <script src="javascript/header.js"></script>
 <script src="javascript/footer.js"></script>
+<script src="javascript/productlist.js"></script>
 </body>
 </html>
