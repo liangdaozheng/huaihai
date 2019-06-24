@@ -45,7 +45,40 @@
         `;
         $("#productcount").html(html);
         //封装按需排列商品函数
-        function countpriceproduct(wines){
+        
+        ////
+        $("#allcountnewprice").children().first().addClass("active").siblings().removeClass("active");
+        /////封装冒泡函数及加载排序函数单击函数
+      function countprice(win){
+          var wines=win;
+          function sortwines(cpp){
+            for(var i=0;i<(wines.length-1);i++){
+              for(var j=0;j<(wines.length-i-1);j++){
+                if(wines[j][cpp]<wines[j+1][cpp]){
+                  var temp=wines[j];
+                  wines[j]=wines[j+1];
+                  wines[j+1]=temp;
+                }
+              }
+            }
+            return wines
+          };
+          //单击选项函数事件
+        $("#allcountnewprice").on("click","li",function(){  
+          var li=$(this);
+          //console.log(li);
+          li.addClass("active").siblings().removeClass("active");
+          var cpp=li.attr("data-all");
+          //console.log(cpp);
+          if(cpp==='all'){
+            return;
+          }else{
+            var wines=sortwines(cpp,wines);
+            loadproduct(wines)
+          }
+        })
+      };
+        //function countpriceproduct(wines){
         //封装整个商品列表函数
       function loadproduct(wines){
           
@@ -67,7 +100,7 @@
           var hl=``;
           for (var p of pic){
             hl+=`
-            <li class="${pic[0]==p?'active':''}"><img src="${p.sm}" alt data-md=${p.md} ></li>
+            <li class="${pic[0]==p?'active':''}" data-ullis="mouse"><img src="${p.sm}" alt data-md=${p.md} ></li>
             `;
           }
           return hl;
@@ -84,7 +117,7 @@
                 <div><img class="big_pic_box" src="${mdpic(wine.wid)[0].md}"></img></div>
               </a>
               <div class="small_pic">
-                <ul class="small_pic_list">
+                <ul class="small_pic_list" >
                   ${smpics(wine.wid)}
                 </ul>
               </div>
@@ -131,18 +164,33 @@
           `;
         }
         $("#wineinfo").html(html);
+        /////单击销量事件
+        countprice(wines)
+        //鼠标移入小图标事件
+        picsevent();
+        //购物车函数位置处
+
+
+
+
       };
       //加载页面开始为前20个
       (function(){
         var newwines=[] ;
-          for (var i=0;i<=19;i++){
-            newwines.push(wines[i]);
-          }; 
+          if(wines.length<=20){
+            newwines=wines;
+          }else{
+            for (var i=0;i<=19;i++){
+              newwines.push(wines[i]);
+            }; 
+          }
         loadproduct(newwines);
       })()
       //判断wine的数量加载页面
       if(wines.length<=20){
-        $("#footpagenav").css({"display":"none"})
+        $("#footpagenav").css({"display":"none"});
+        $("#gotoback").css({"display":"none"});
+        $("#gotonext").css({"display":"none"});
       }else{
         var num=Math.ceil(wines.length/20);
         //console.log(num)
@@ -182,9 +230,13 @@
           if(index==1){
             $("#prevpage").css({"display":"none"});
             $("#nextpage").css({"display":"block"});
+            $("#gotoback").css({"display":"none"});
+            $("#gotonext").css({"display":"block"});
           }else if(index==num){
             $("#nextpage").css({"display":"none"});
             $("#prevpage").css({"display":"block"});
+            $("#gotoback").css({"display":"block"});
+            $("#gotonext").css({"display":"none"});
           }
           //调用截取数组
           var wines=slicewines(index);
@@ -208,6 +260,8 @@
           loadproduct(wines);
           if(index>=num){
             $("#nextpage").css({"display":"none"});
+            $("#gotoback").css({"display":"block"});
+            $("#gotonext").css({"display":"none"});
           }
         });
         //上一页按钮
@@ -224,6 +278,8 @@
           loadproduct(wines);
           if(index<=1){
             $("#prevpage").css({"display":"none"});
+            $("#gotoback").css({"display":"none"});
+            $("#gotonext").css({"display":"block"});
           }
         });
         //跳动第几页
@@ -238,9 +294,13 @@
             if(index==1){
               $("#prevpage").css({"display":"none"});
               $("#nextpage").css({"display":"block"});
+              $("#gotoback").css({"display":"none"});
+              $("#gotonext").css({"display":"block"});
             }else if(index==num){
               $("#nextpage").css({"display":"none"});
               $("#prevpage").css({"display":"block"});
+              $("#gotoback").css({"display":"block"});
+              $("#gotonext").css({"display":"none"});
             };
             //数字块加载颜色
             $("#pagenavlist").children().eq(index).addClass("ac_color").siblings().removeClass("ac_color");
@@ -255,18 +315,146 @@
         })
         //左右显示页面的箭头
         //左右两个函数,获取前面的值自++,然后复制调用上面的函数
-
+        $("#gotoback").css({"display":"none"});
+        //左箭头
+        $("#gotoback").click(function(){
+          var index=$("#nowpage").html();
+          if(index==1){
+            $("#nowpage").html(index);
+            $("#gotoback").css({"display":"none"});
+            $("#gotonext").css({"display":"block"});
+          }else{
+            index--;
+            if(index==1){ $("#gotoback").css({"display":"none"});};
+            $("#nowpage").html(index);
+            $("#gotonext").css({"display":"block"});
+            //加载数据
+            if(index==1){
+              $("#prevpage").css({"display":"none"});
+              $("#nextpage").css({"display":"block"});
+            }else if(index==num){
+              $("#nextpage").css({"display":"none"});
+              $("#prevpage").css({"display":"block"});
+            };
+            //数字块加载颜色
+            $("#pagenavlist").children().eq(index).addClass("ac_color").siblings().removeClass("ac_color");
+            //调用截取数组
+            var wines=slicewines(index);
+            //调用加载函数
+            //console.log(wines);
+            loadproduct(wines);
+          }
+        });
+        //右箭头
+        $("#gotonext").click(function(){
+          var index=$("#nowpage").html();
+          if(index==num){
+            $("#nowpage").html(index);
+            $("#gotoback").css({"display":"block"});
+            $("#gotonext").css({"display":"none"});
+          }else{
+            index++;
+            if(index==num){$("#gotonext").css({"display":"none"});};
+            $("#nowpage").html(index);
+            $("#gotoback").css({"display":"block"});
+            //加载数据
+            if(index==1){
+              $("#prevpage").css({"display":"none"});
+              $("#nextpage").css({"display":"block"});
+            }else if(index==num){
+              $("#nextpage").css({"display":"none"});
+              $("#prevpage").css({"display":"block"});
+            };
+            //数字块加载颜色
+            $("#pagenavlist").children().eq(index).addClass("ac_color").siblings().removeClass("ac_color");
+            //调用截取数组
+            var wines=slicewines(index);
+            //调用加载函数
+            //console.log(wines);
+            loadproduct(wines);
+          }
+        });
+                 
       }//wines>20的结尾
-    };//封装countpriceproduct(wines)的结尾
+      
+    //};//封装countpriceproduct(wines)的结尾
       //按需选择排列商品
-      countpriceproduct(wines);
-      //综合销量新品价格 四个函数,把wines数组重新排序再加载countpriceproduct(wines);
+      //countpriceproduct(wines);
+      //console.log($("li[data-ullis='mouse']"));鼠标移入小图事件
+      function picsevent(){
+      $("li[data-ullis='mouse']").hover(function(){
+        var $li=$(this);
+        //console.log($li);
+        $li.addClass("active").siblings().removeClass("active");
+        var src=$li.children().first().attr("data-md");
+        //console.log(src);
+        $li.parent().parent().parent().children().first().children().first().children().first().attr("src",src); 
+      });
+      };
+      picsevent();
+      //购物车详细功能封装函数
+      
+
+
+
+
+
+
+
+
+      //综合销量新品价格 四个函数,把wines数组重新排序再加载countpriceproduct(wines);封装冒泡函数 cpp为传入的条件sold_count/shelf_time/price
+      
       //1综合countpriceproduct(wines);直接加载
-      //2销量sold_count 排序
-      //3新品shelf_time
-      //4价格price
-      //
-      //购物车详细功能
+      // $("#allcountnewprice").children().first().addClass("active").siblings().removeClass("active");
+      // $("#allcountnewprice").on("click","li",function(){
+      //   var li=$(this);
+      //   //console.log(li);
+      //   li.addClass("active").siblings().removeClass("active");
+      //   var cpp=li.attr("data-all");
+      //   console.log(cpp);
+      //   if(cpp==='all'){
+      //     return;
+      //   }else{
+      //     var wines=sortwines(cpp);
+      //     countpriceproduct(wines);
+      //     picsevent()
+      //   }
+      // })
+      // $("#allmores").addClass("active").siblings().removeClass("active");
+      // $("#allmores").click(()=>{
+      //   $("#allmores").addClass("active").siblings().removeClass("active");
+      //   countpriceproduct(wines);
+      // })
+      // //2销量sold_count 排序
+      // $("#soldcount").click(()=>{
+      //   $("#soldcount").addClass("active").siblings().removeClass("active");
+      //   //调用冒泡函数
+      //   var wines=sortwines('sold_count');
+      //   //加载数据
+      //   countpriceproduct(wines);
+      // })
+      // //console.log(sortwines('sold_count'))
+      // //3新品shelf_time
+      // //newproduct
+      // $("#newproduct").click(()=>{
+      //   $("#newproduct").addClass("active").siblings().removeClass("active");
+      //   //调用冒泡函数
+      //   var wines=sortwines('shelf_time');
+      //   //加载数据
+      //   countpriceproduct(wines);
+      // })
+      // //4价格price
+      // //productprice
+      // $("#productprice").click(()=>{
+      //   $("#productprice").addClass("active").siblings().removeClass("active");
+      //   //调用冒泡函数
+      //   var wines=sortwines('price');
+      //   //加载数据
+      //   countpriceproduct(wines);
+      // })
+      
+     
+      
       })
       .catch(err=>console.log(err))
     }

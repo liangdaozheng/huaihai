@@ -308,12 +308,19 @@
   color:#333;
   background: #fff url("../img/icon_down_off.png") no-repeat 36px center;
 }
-.lists_footer_pros .lists_footer_navsec .navsec_top .navsec_top_left ul li:first-child a,
+/* .lists_footer_pros .lists_footer_navsec .navsec_top .navsec_top_left ul li:first-child a,
 .lists_footer_pros .lists_footer_navsec .navsec_top .navsec_top_left ul li a:active{
   color:#fff;
   border:1px solid #cc3341; 
   background: #cc3341 url("../img/icon_down_on.png") no-repeat 36px center;
+} */
+.lists_footer_pros .lists_footer_navsec .navsec_top .navsec_top_left ul li.active a{
+  color:#fff;
+  border:1px solid #cc3341; 
+  background: #cc3341 url("../img/icon_down_on.png") no-repeat 36px center;
 }
+
+
 .lists_footer_pros .lists_footer_navsec .navsec_top .navsec_top_right{
   width:38%;
   float: right;

@@ -287,16 +287,16 @@
 				<!-- 上部标题 -->
 				<div class="navsec_top">
 					<div class="navsec_top_left">
-						<ul>
-							<li><a href="javascript:;">综合</a></li>
-							<li><a href="javascript:;">销量</a></li>
-							<li><a href="javascript:;">新品</a></li>
-							<li><a href="javascript:;">价格</a></li>
+						<ul id="allcountnewprice">
+							<li data-all="all"><a href="javascript:;">综合</a></li>
+							<li data-all="sold_count"><a href="javascript:;">销量</a></li>
+							<li data-all="shelf_time"><a href="javascript:;">新品</a></li>
+							<li data-all="price"><a href="javascript:;">价格</a></li>
 						</ul>
 					</div>
 					<div class="navsec_top_right">
 						<div class="fu">
-							<a href="javascript:;"><span>&lt;</span></a><a href="javascript:;"><span>&gt;</span></a>
+							<a href="javascript:;"><span id="gotoback">&lt;</span></a><a href="javascript:;"><span id="gotonext">&gt;</span></a>
 						</div>
 						<div class="word" id="productcount">
 								<!-- 供<span>34</span>件商品<span>1</span> / <a href="#">2</a> -->
