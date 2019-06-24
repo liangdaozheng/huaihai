@@ -10,6 +10,8 @@ const userRouter=require('./routes/user.js');
 const index=require('./routes/index.js');
 //引入商品详情页数据
 const detail=require('./routes/detail');
+//引入商品列表页
+const productlist=require('./routes/productlist');
 
 
 
@@ -38,5 +40,7 @@ server.use('/user',userRouter);
 server.use('/index',index);
 //挂载商品详情路由
 server.use('/detail',detail);
+//挂载商品列表页路由
+server.use('/productlist',productlist);
 
 
