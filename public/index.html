@@ -10,6 +10,7 @@
 	<!--引入css文件-->
 	<link rel="stylesheet" href="css/comm.css">
 	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/header.css">
 </head>
 <body>
 <!--引入头部-->
@@ -21,9 +22,9 @@
 			<div class="index_search" id="index_search_row">
 				<div class="search_auto_row">
 					<div></div>
-					<div class="index_search_inpbut">
-						<input type="text" placeholder="习酒">
-						<button></button>
+					<div class="index_search_inpbut" >
+						<input type="text" placeholder="习酒" id="searchinput">
+						<button id="searchbtn"></button>
 					</div>
 				</div>
 			</div>
@@ -35,15 +36,15 @@
 						<span></span>
 						<div>购物车</div>
 					</a>
-					<a href="order.html">
+					<a href="order.html?kw=我的收藏">
 						<em></em>
 						<div>我的收藏</div>
 					</a>
-					<a href="order.html">
+					<a href="order.html?kw=我的消息">
 						<em></em>
 						<div>我的消息</div>
 					</a>
-					<a href="order.html">
+					<a href="order.html?kw=个人中心">
 						<em></em>
 						<div>个人中心</div>
 					</a>
@@ -70,20 +71,20 @@
 						<a href="javascript:;" class="close" id="close_cart">关闭</a>
 					</div>
 					<!-- 动图 -->
-					<div class="cart_gif"><img src="img/loading.gif" alt=""></div>
+					<div class="cart_gif" id="cartgif"><img src="img/loading.gif" alt=></div>
 					<!-- 订单 -->
-					<div class="cart_order_pro">
-						<div class="no_pro">
+					<div class="cart_order_pro" id="indexorder">
+						<div class="no_pro" id="indexnoorder">
 							<p>购物车空空的，赶紧去挑选心仪的商品吧</p>
 							<a href="index.html">去首页看看</a>
 						</div>
 						<!-- 商品订单 -->
-						<div class="pro_order_boxs" >
+						<div class="pro_order_boxs" id="indexorderdetail">
 							<!-- 结算题头 -->
 							<div class="pro_order_header clearboth ">
 								<div class="column t_check">
 									<div class="checkboxall">
-										<input type="checkbox" class="hhcheck">
+										<input type="checkbox" class="hhcheck" id="checkedall">
 										<label style="display: none">勾选全部商品</label>
 									</div>
 									全选
@@ -96,9 +97,10 @@
 								<div class="column t_active">操作</div>
 							</div>
 							<!-- 内容 -->
-							<div class="pro_order_card" >
+							<div id="cartcard"></div>
+							<!-- <div class="pro_order_card" >
 								<div class="order_card_main clearboth">
-									<!-- 选择框 -->
+								
 									<div class="radiobox cell">
 										<div class="radio">
 											<input class="boxed" type="checkbox">
@@ -106,18 +108,18 @@
 											<span class="lear_span"></span>
 										</div>
 									</div>
-									<!-- 图片 名字区 -->
+								
 									<div class="picname_box cell">
 										<div class="picname clearboth">
 											<div class="pic"><a href="javascript:;"><img src="product/xi/xi8810/CznjaHHich.jpg" alt=""></a></div>
 											<div class="name"><a href="javascript:;"></a></div>
 										</div>
 									</div>
-									<!-- 价格区 -->
+									
 									<div class="pricebox cell">
 										<p class="price"><strong>1900.00</strong></p>
 									</div>
-									<!-- 数量块 -->
+								
 									<div class="countbox cell">
 										<div class="count clearboth">
 											<a href="" class="smah">-</a>
@@ -125,20 +127,20 @@
 											<a href="" class="bigh">+</a>
 										</div>
 									</div>
-									<!-- 小合集 -->
+									
 									<div class="salcsumbox cell">
 										<strong>12333.00</strong>
 									</div>
-									<!-- 移除块 -->
+									
 									<div class="deletecartbox cell">
 										<a href="">删除</a>
 									</div>
 								</div>
-							</div>
+							</div> -->
 								<!-- 第二商品 -->
-								<div class="pro_order_card" >
+								<!-- <div class="pro_order_card" >
 										<div class="order_card_main clearboth">
-											<!-- 选择框 -->
+										
 											<div class="radiobox cell">
 												<div class="radio">
 													<input class="boxed" type="checkbox">
@@ -146,18 +148,18 @@
 													<span class="lear_span"></span>
 												</div>
 											</div>
-											<!-- 图片 名字区 -->
+										
 											<div class="picname_box cell">
 												<div class="picname clearboth">
 													<div class="pic"><a href="javascript:;"><img src="product/xi/xi8810/CznjaHHich.jpg" alt=""></a></div>
 													<div class="name"><a href="javascript:;"></a></div>
 												</div>
 											</div>
-											<!-- 价格区 -->
+											
 											<div class="pricebox cell">
 												<p class="price"><strong>1900.00</strong></p>
 											</div>
-											<!-- 数量块 -->
+											
 											<div class="countbox cell">
 												<div class="count clearboth">
 													<a href="" class="smah">-</a>
@@ -165,25 +167,25 @@
 													<a href="" class="bigh">+</a>
 												</div>
 											</div>
-											<!-- 小合集 -->
+											
 											<div class="salcsumbox cell">
 												<strong>12333.00</strong>
 											</div>
-											<!-- 移除块 -->
+										
 											<div class="deletecartbox cell">
 												<a href="">删除</a>
 											</div>
 										</div>
-								</div>
+								</div> -->
 						</div>
 					</div>
 					<!-- 按钮组 -->
-					<div class="cart_btns">
+					<div class="cart_btns" id="indexorderbtn">
 						<div class="cart_btns_left">
-							<div class="pross"><span>0</span>件商品</div>
-							<div class="marmm">共计：<span>0.00</span></div>
+							<div class="pross"><span id="checknum">0</span>件商品</div>
+							<div class="marmm">共计：<span id="allsum">0.00</span></div>
 						</div>
-						<a href="javascript:;" class="salced">去购物车结算</a>
+						<a href="javascript:;" class="salced" id="gotocartpay">去购物车结算</a>
 					</div>
 				</div>
 			</aside>
@@ -212,7 +214,7 @@
 					<div class="cart">
 						<a href="order.html">
 							我的购物车
-							<span>0</span>
+							<span id="cartcountindexhead">0</span>
 						</a>
 					</div>
 				</div>
@@ -416,7 +418,7 @@
 											</div>
 											<div class="list_images">
 													<img src="img/nopic215.png" alt="">
-													<a href="product_list.html?fid=14">悠蜜蓝莓利口酒</a>
+													<a href="product_list.html?fid=11">悠蜜蓝莓利口酒</a>
 											</div>
 											<div class="list_images">
 													<img src="img/nopic215.png" alt="">
@@ -1123,7 +1125,8 @@
 	</section>
 <!--引入底部-->
 	<footer id="footer" ></footer>
-	<script src="javascript/jquery-1.11.3.js"></script>
+	<script src="javascript/jquery-3.2.1.js"></script>
+	<script src="javascript/myajax.js"></script>
 	<script src="javascript/header.js"></script>
 	<script src="javascript/footer.js"></script>
 	<script src="javascript/index.js"></script>

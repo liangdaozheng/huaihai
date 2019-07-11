@@ -1,0 +1,65 @@
+<!--
+  Generated template for the IndexPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>怀海商城</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <!-- 轮播图 -->
+  <ion-slides *ngIf="cList.length>0" pager autoplay=3000 loop style="height: 120px" effect='cube'>
+    <ion-slide *ngFor="let tmp of cList" (click)="jumpDetail(tmp.wid)">
+      <img [src]="'http://127.0.0.1:8080/'+tmp.img" alt="">
+    </ion-slide>
+  </ion-slides>
+<!-- 新品推荐 -->
+  <ion-scroll scrollX style="height:300px;white-space:nowrap" >
+      <ion-card *ngFor="let tmp of newList" style="display:inline-block" (click)="jumpDetail(tmp.wid)">
+        <ion-card-content>
+          <img [src]="'http://127.0.0.1:8080/'+tmp.pic" alt="" style="height: 200px"> 
+          <h4>{{tmp.title}}</h4>
+        </ion-card-content>
+      </ion-card>
+  </ion-scroll>
+    <!-- 热销产品 -->
+  <ion-list>
+    <ion-item *ngFor="let tmp of hotList" text-wrap>
+      <ion-thumbnail item-start (click)="jumpDetail(tmp.wid)">
+        <img [src]="'http://127.0.0.1:8080/'+tmp.pic" alt="">
+      </ion-thumbnail>
+      <h5>{{tmp.price |currency:"￥"}}</h5>
+      <p>{{tmp.title}}</p>
+      <button item-end ion-button clear color="danger" (click)="addcart(tmp.wid)">
+        <ion-icon name="cart" ></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
+    <!-- 下拉记载更多 -->
+    <ion-list>
+      <ion-item *ngFor="let tmp of loadMore" text-wrap>
+        <ion-thumbnail item-start (click)="jumpDetail(tmp.wid)">
+          <img [src]="'http://127.0.0.1:8080/'+tmp.sm" alt="">
+        </ion-thumbnail>
+        <h5>{{tmp.price | currency:"￥"}}</h5>
+        <p>{{tmp.pname}}</p>
+        <button item-end ion-button clear color="danger" (click)="addcart(tmp.wid)">
+          <ion-icon name="cart"></ion-icon>
+        </button>
+      </ion-item>
+    </ion-list>
+    <ion-infinite-scroll (ionInfinite)="loadMoreproduct($event)">
+      <ion-infinite-scroll-content loadingText="正在加载更多···">
+  
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>   
+  </ion-content>
+
+
+

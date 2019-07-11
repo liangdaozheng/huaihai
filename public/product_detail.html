@@ -9,6 +9,7 @@
 	<!--引入css文件-->
 	<link rel="stylesheet" href="css/comm.css">
 	<link rel="stylesheet" href="css/product_detail.css">
+	<link rel="stylesheet" href="css/header.css">
 </head>
 <body>
 	<!--引入头部-->
@@ -418,9 +419,9 @@
 						<div class="c_content clearboth">
 							<!-- 选量 -->
 							<div class="con_left clearboth">
-								<a href="javascript:;">-</a>
-								<input type="text" value="1">
-								<a href="javascript:;">+</a>
+								<a href="javascript:;" data-btn="count">-</a>
+								<input type="text" value="1" id="buycount">
+								<a href="javascript:;" data-btn="count">+</a>
 							</div>
 							<!-- 库存量 -->
 							<div class="con_right clearboth" id="sold_count">
@@ -431,8 +432,8 @@
 							<!-- 购物车 -->
 							<div class="con_bottom clearboth">
 								<div>
-									<a class="shopping_cart" href="javascript:;">加入购物车</a>
-									<a class="buy_now" href="javascript:;">立即购买</a>
+									<a class="shopping_cart" href="javascript:;" id="detailcart">加入购物车</a>
+									<a class="buy_now" href="javascript:;" id="detailbuynow">立即购买</a>
 								</div>
 							</div>
 						</div>

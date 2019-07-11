@@ -5,6 +5,8 @@ function ajax({url, data, params}) {
           type: params && params.type || 'post',
           dataType: params && params.dataType || 'JSON',
           data: data,
+          xhrFields:{withCredentials:true},
+          crossDomain:true,
           success: function(res) {
               open(res)
           },

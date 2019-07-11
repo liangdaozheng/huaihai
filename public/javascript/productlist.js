@@ -21,9 +21,9 @@
         //console.log(result)
         //结构数据
         var {fname,wines,pics}=result.data;
-        console.log(fname);
-        console.log(wines);
-        console.log(pics);
+        //console.log(fname);
+        //console.log(wines);
+        //console.log(pics);
         //数据页面的加载
         var html=`
             <tr>
@@ -149,13 +149,13 @@
               <a href="javascript:;" class="btn">
                 <div>
                   <i class="cang"></i>
-                  <span data-wid=${wine.wid}>收藏</span>
+                  <span data-wid=${wine.wid} data-cang="listcang">收藏</span>
                 </div>
               </a>
               <a href="javascript:;" class="btn">
                 <div class="cart">
                   <i class="jia"></i>
-                  <span data-wid=${wine.wid}>加入购物车</span>
+                  <span data-wid=${wine.wid} data-cart="listcart">加入购物车</span>
                 </div>
               </a>
             </div>
@@ -169,8 +169,8 @@
         //鼠标移入小图标事件
         picsevent();
         //购物车函数位置处
-
-
+        listcang()
+        listcart()
 
 
       };
@@ -393,13 +393,65 @@
       };
       picsevent();
       //购物车详细功能封装函数
-      
-
-
-
-
-
-
+      ///收藏功能添加函数
+      function listcang(){
+        $("span[data-cang='listcang']").click(function(){
+          //console.log($(this));
+          var $span=$(this);
+          //var wid=$(this)[0].dataset.wid;
+         // console.log(wid);
+          if(sessionStorage.uid!=undefined){
+            $(this).html("成功");
+          }else{
+            $(this).html("请登录");
+          };
+          setTimeout(function(){$span.html("收藏")},1000);
+        })
+      };
+      function listcart(){
+        var key=true;
+        $("span[data-cart='listcart']").click(function(){
+          //console.log($(this));
+          var $span=$(this);
+          var wid=$(this)[0].dataset.wid;
+          var count=1;
+          //console.log(wid);
+          if(sessionStorage.uid!=undefined){
+            if(key){
+              key=false;
+              var url="cart/add";
+              var data={wid,count};
+              var params={
+                  type:"get",
+                  dataType:"json"
+                  };
+              window.ajax({url,data,params})
+              .then(result=>{
+                //console.log(result);
+                if(result.code==1){
+                  key=true;
+                  $span.html("添加成功");
+                  setTimeout(function(){
+                    $span.html("加入购物车");
+                },1000);
+                }else{
+                  key=true;
+                  $span.html("添加失败");
+                  setTimeout(function(){
+                    $span.html("加入购物车");
+                },1000);
+                }
+              })
+            }else{
+              $span.html("数据处理中");
+              setTimeout(function(){$span.html("加入购物车");},1000);
+            }
+          }else{
+            $span.html("请登录");
+            setTimeout(function(){$span.html("加入购物车");},1000);
+          }
+        })
+      }
 
 
       //综合销量新品价格 四个函数,把wines数组重新排序再加载countpriceproduct(wines);封装冒泡函数 cpp为传入的条件sold_count/shelf_time/price

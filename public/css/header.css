@@ -22,6 +22,7 @@
 .header_header_nav>li>a{
   text-decoration: none;
   color:#999999;
+  cursor: pointer;
 }
 .header_header_nav>li:nth-child(2)>a{
   color:#cc2e36;

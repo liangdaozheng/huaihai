@@ -20,7 +20,7 @@
       //console.log(result);
       //结构出结果来
       var {detail,pics,detailpic}=result.data;
-      console.log(detail,pics,detailpic);
+      //console.log(detail,pics,detailpic);
       //单品商品的对象
       var detail=detail[0];
       var html=`
@@ -120,7 +120,7 @@
         if($(this).is("#backpro")){
           $backpro.css({"display":"block"}).siblings().css({"display":"none"})
         }else if($(this).is("#art")){
-          console.log($(this));
+          //console.log($(this));
           $art.css({"display":"block"}).siblings().css({"display":"none"})
         }else{
           $detailpic.css({"display":"block"}).siblings().css({"display":"block"})
@@ -151,7 +151,71 @@
       //将文档片段添加到页面中
       $("#detail_pic").html(frag);
       //地址的选着
-      //添加购物车功能
+      //购买数量的增减
+      var $buycount=$("#buycount");
+      var count=Math.floor($buycount.val());
+      $("a[data-btn='count']").click(function(){
+        //console.log($(this).text());
+        if($(this).text()=="-"){
+          if($buycount.val()>1){
+            count--;
+            $buycount.val(count);
+          }
+        };
+        if($(this).text()=="+"){
+            count++;
+            $buycount.val(count);         
+        }
+      })
+      //添加购物车功能和立即购买
+      $("#detailbuynow").click(function(){
+        //console.log(sessionStorage.uid)
+        if(sessionStorage.uid!=undefined){
+          $(this).html("系统升级中");
+          setTimeout(function(){$("#detailbuynow").html("立即购买");},1000);
+        }else{
+          $(this).html("请登录");
+          setTimeout(function(){$("#detailbuynow").html("立即购买");},1000);
+        }
+      });
+      ///设置开关
+      var key=true;
+      $("#detailcart").click(function(){
+        if(sessionStorage.uid!=undefined){
+          if(key){
+            key=false;
+            var url="cart/add";
+            var data={wid,count};
+            var params={
+                type:"get",
+                dataType:"json"
+                };
+            window.ajax({url,data,params})
+            .then(result=>{
+              //console.log(result);
+              if(result.code==1){
+                key=true;
+                $("#detailcart").html("添加成功");
+                setTimeout(function(){
+                  $("#detailcart").html("加入购物车");
+              },1000);
+              }else{
+                key=true;
+                $(this).html("添加失败");
+                setTimeout(function(){
+                  $("#detailcart").html("加入购物车");
+              },1000);
+              }
+            })
+          }else{
+            $(this).html("数据处理中");
+            setTimeout(function(){$("#detailcart").html("加入购物车");},1000);
+          }
+        }else{
+          $(this).html("请登录");
+          setTimeout(function(){$("#detailcart").html("加入购物车");},1000);
+        }
+      })
 
 
 

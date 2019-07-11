@@ -1,0 +1,63 @@
+<!--
+  Generated template for the OrderConfirmPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>确认订单</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ng-container *ngIf="key">
+  <!-- myList 的数组长度为0 -->
+  <div *ngIf="myList.length==0" style="text-align: center" >
+      <img src="../../assets/imgs/404_img2.png" alt=""  style="width:100px;height:100px" >
+      <h1>未有要支付的商品!!!</h1>
+      <button ion-button color="danger" round block (click)="jumpPre()">进去再逛逛</button>
+  </div>
+  <!-- 大于0 -->
+  <ion-list *ngIf="myList.length>0">
+    <ion-item>
+      <ion-grid>
+        <ion-row align-items-center>
+          <ion-col col-3>
+            <ion-icon name="pin"></ion-icon>
+          </ion-col>
+          <ion-col text-wrap>
+            <p>姓名：{{myName}}</p>
+            <p>地址：{{myAdd}}</p>
+            <p>电话：{{myPhone}}</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item *ngFor="let tmp of myList">
+        <ion-thumbnail item-end>
+          <ion-grid>
+            <ion-row>
+              <ion-col col-3>
+                <img [src]="'http://127.0.0.1:8080/'+tmp.sm" alt="">
+              </ion-col>
+              <ion-col>
+                <h4>{{tmp.pname}}</h4>
+                <p style="color:#cc3341">{{tmp.price | currency:'CNY'}} X {{tmp.count}}</p>
+              </ion-col> 
+            </ion-row>
+          </ion-grid>
+        </ion-thumbnail>
+    </ion-item>   
+  </ion-list>
+</ng-container>
+</ion-content>
+<ng-container *ngIf="key">
+<ion-footer *ngIf="myList.length>0">
+  <button ion-button round color="secondary" block (click)="confirmPay()">确认支付</button>
+</ion-footer>
+</ng-container>
+

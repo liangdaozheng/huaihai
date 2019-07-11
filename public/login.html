@@ -30,23 +30,24 @@
 			<!--用户名行开始-->
 			<div class="login_right_other">
 				<label for="uname">用户名称</label>
-				<input type="text" id="uname" placeholder="请输入账号名" onfocus="getUname()" onblur="loseUname()" title="请登录">
+				<input type="text" id="uname" placeholder="请输入账号名"  title="请登录">
 			</div>
 			<p id="puname"></p>
 			<!--用户名结束-->
 			<!--密码行开始-->
 			<div class="login_right_other">
 				<label for="upwd">用户密码</label>
-				<input type="password" id="upwd" placeholder="请输入密码" onfocus="getUpwd()" onblur="loseUpwd()" title="注意保密">				
+				<input type="password" id="upwd" placeholder="请输入密码"  title="注意保密">				
 			</div>
 			<p id="pupwd"></p>	
 			<!--密码结束-->
 			<div class="login_auto_line">
-				<label for="auto"><input type="checkbox" id="auto">自动登录</label>	
-				<a href="#">忘记密码？</a>
+				<label for="auto"><input type="checkbox" id="auto" >自动登录</label>	
+				<a href="javascript:;" id="losepassword">忘记密码？</a>
+				<div class="losepassword"></div>
 			</div>
 			<!--按钮开始-->		
-			<button onclick="getLogin()" id="user_login">登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录</button>			
+			<button  id="user_login">登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录</button>			
 			<!--按钮结束-->
 		</aside>
 	<!--登录页面底部信息-->
@@ -58,6 +59,9 @@
 	</section>
 <!--section end-->
 <!--引入js文件-->
-	<script type="text/javascript" src="javascript/login.js"></script>
+<script type="text/javascript" src="javascript/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="javascript/myajax.js"></script>
+<script type="text/javascript" src="javascript/signin.js"></script>
+<!-- <script type="text/javascript" src="javascript/login.js"></script> -->
 </body>
 </html>
